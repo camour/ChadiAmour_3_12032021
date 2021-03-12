@@ -1,0 +1,30 @@
+@mixin align-block($width: 90%, $text-align: center)
+{
+    width: $width;
+    margin: auto;
+    text-align: $text-align;
+}
+
+@mixin flex($direction, $justify-content, $align-items)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin create-image($urlImage, $background_size, $width, $height)
+{
+    width: $width;
+    height: $height;
+    background-image: url($urlImage);
+    background-repeat: no-repeat;
+    background-size: $background_size;    
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+@mixin background-color($color)
+{
+    background-color: $color;
+}
+

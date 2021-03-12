@@ -1,0 +1,32 @@
+@import "../Utils/mixins";
+footer
+{
+    @include align-block(99%, left);
+    background-color: rgb(73, 72, 72);
+    color: white;
+
+    ul
+    {
+        list-style-type: none;
+        
+        padding-left: 12px;
+    }
+    
+    a
+    {
+        display: inline-block;
+        @include flex(row, flex-start, center);
+        color: white;
+        text-decoration: none;       
+    }
+    i
+    {
+        margin-right: 6px;
+    }
+    p
+    {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    
+}

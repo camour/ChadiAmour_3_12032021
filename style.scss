@@ -1,0 +1,224 @@
+
+@import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Base/font";
+
+
+
+body
+{
+    font-family: 'My_Roboto', serif;
+}
+
+@import "./Layout/header";
+
+.map
+{
+    @include align-block();
+    @include background-color(#DCDCDC);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px #ccc7c7 solid;
+  
+    &__research
+    {
+        @include align-block();
+        @include flex(row, center, center);
+    
+    }
+    input
+    {
+        border: 0px;
+        @include background-color(#DCDCDC);
+        margin-left: 15px;
+        font-family: 'My_Roboto';
+        color: rgb(73, 72, 72);
+        display: inline-block;
+        
+    }
+    .fa-map-marker-alt
+    {
+        display: inline-block;
+    }
+}
+
+.view
+{
+    @include align-block();
+    @include background-color(#EAEAEA);
+    position: relative;
+    
+    h2
+    {
+        
+        @include align-block();
+        padding-top: 20px;
+        font-family: 'My_Shrikhand', serif;
+               
+    }
+    p
+    {
+        color: rgb(73, 72, 72);
+        font-size: 0.9em;
+    }
+    input 
+    {
+        padding: 20px;
+    }
+}
+
+.btn
+{
+    border-radius: 2rem;
+    
+    background: radial-gradient(circle, $primaryColor 0%, $secondaryColor 100%);
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    color: white;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 5px #c9c5c5;
+
+    &:hover
+    {
+       
+        &::after
+        {
+            opacity: 1;
+        }
+    }
+
+    &::after
+    {
+        content: "";
+        position: absolute;
+        border-radius: 2rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: radial-gradient(circle, lighten($primaryColor, 10) 0%, lighten($secondaryColor, 10) 100%);
+        box-shadow: 8px 8px 5px #c9c5c5;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 200ms;
+
+        
+    }
+}
+
+.process
+{
+    @include align-block(90%, left);
+    margin-top: 40px;
+    position: relative;
+
+    .etape
+    {
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        @include background-color(#F7F7F7);
+        box-shadow: 5px 5px 5px #EAEAEA;
+        position: relative;
+        
+        p 
+        {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 25;
+        }
+        &__circle
+        {
+            padding: 5px;
+            width: 20px;
+            height: 20px;
+            color: white;            
+            background-color: $primaryColor;
+            border-radius: 20px;   
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle; 
+            margin-right: 25px;        
+                     
+        }
+        .fas, .far
+        {
+            transform: scale(1.4);
+            margin-right: 25px;
+            color: rgb(73, 72, 72);           
+        }
+        &__X
+        {
+            position: relative;
+            left: -30px;
+        }
+    }
+    
+}
+
+.summary-restaurants
+{
+    @include align-block(90%, left);
+    @include background-color(#EAEAEA);
+    padding: 7px;
+    position: relative;
+
+}
+
+.restaurant
+{
+    border-radius: 15px;
+    @include align-block(320px, left);    
+    background-color: white;
+    position: relative;
+    margin-top: 25px;
+
+    #restaurant__picture1
+    {
+             
+        @include create-image('./Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg', cover, 100%, 200px);
+    }
+
+    
+    #restaurant__picture2
+    {
+             
+        @include create-image('./Maquettes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg', cover, 100%, 200px);
+    }
+
+   
+    #restaurant__picture3
+    {
+             
+        @include create-image('./Maquettes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg', cover, 100%, 200px);
+    }
+
+   
+
+    #restaurant__picture4
+    {
+             
+        @include create-image('./Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg', cover, 100%, 200px);
+    }
+
+    &__description
+    {
+        padding-left: 6px;
+        display: inline-block;
+        width: 50%;        
+    }
+
+    .fa-heart
+    {             
+        position: relative;
+        right: -30%;
+        vertical-align: top;
+        color: black;
+        display: inline-block; 
+        margin-top: 25px;          
+    }
+}
+
+@import "./Layout/footer";
