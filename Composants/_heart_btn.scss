@@ -1,0 +1,37 @@
+@import "../Utils/variables";
+
+    .fas.fa-heart
+    {             
+        position: absolute;
+        right: 30px;
+        vertical-align: top;
+        opacity: 0;
+        color: $primaryColor;
+        display: inline-block; 
+        //margin-top: 25px;
+        z-index: 2;        
+        
+        transition: opacity 1s;
+
+        &:hover
+        {
+            opacity: 1;
+        }
+    }
+    .far.fa-heart
+    {
+        position: absolute;
+        right: 30px;
+        vertical-align: top;
+        color: black;
+        display: inline-block; 
+        //margin-top: 25px;  
+        z-index: 1;      
+        
+        transition: opacity 1s;
+
+        &:hover
+        {
+            opacity: 0;
+        }
+    }

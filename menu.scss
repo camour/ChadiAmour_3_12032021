@@ -1,0 +1,46 @@
+@import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Layout/header";
+@import "./Composants/btn";
+@import "./Layout/footer";
+
+body
+{
+    @include align-block(99%, left);
+}
+.header
+{
+    @include flex(row, space-between, center);
+}
+
+.cover
+{
+    @include align-block(99%);
+    @include create-image('./Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg', cover, 99%, 200px);
+}
+
+.menu
+{   
+    @include align-block(99%, left);
+    position: relative;
+    top: -20px;
+   
+    background-color: #EAEAEA;
+    border-radius: 1.5rem;
+    
+    &__title
+    {
+        position: relative;
+        @include flex(row, flex-start, center);
+        h2
+        {
+            font-style: italic;
+            margin-left: 10px;
+        }
+    
+        @import "./Composants/heart_btn"; 
+        
+    }
+
+    
+}

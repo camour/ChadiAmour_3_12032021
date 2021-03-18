@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "My_Roboto";
+  src: url("./Polices/Roboto-Black.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "My_Shrikhand";
+  src: url("./Polices/Shrikhand-Regular.otf") format("otf");
+}
+
+.header {
+  width: 99%;
+  margin: auto;
+  text-align: center;
+}
+
+.header__logo {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  background-image: url("./Maquettes_Ohmyfood/images/logo/ohmyfood.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.btn {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+.btn-row {
+  margin-bottom: 0px;
+}
+
+.btn-row a {
+  color: black;
+}
+
+.btn-row .fa-arrow-left {
+  vertical-align: middle;
+}
+
+footer {
+  width: 99%;
+  margin: auto;
+  text-align: left;
+  background-color: #494848;
+  color: white;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 12px;
+}
+
+footer a {
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+footer i {
+  margin-right: 6px;
+}
+
+footer p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+body {
+  width: 99%;
+  margin: auto;
+  text-align: left;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cover {
+  width: 99%;
+  margin: auto;
+  text-align: center;
+  width: 99%;
+  height: 200px;
+  background-image: url("./Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.menu {
+  width: 99%;
+  margin: auto;
+  text-align: left;
+  position: relative;
+  top: -20px;
+  background-color: #EAEAEA;
+  border-radius: 1.5rem;
+}
+
+.menu__title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__title h2 {
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.menu__title .fas.fa-heart {
+  position: absolute;
+  right: 30px;
+  vertical-align: top;
+  opacity: 0;
+  color: #9356DC;
+  display: inline-block;
+  z-index: 2;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.menu__title .fas.fa-heart:hover {
+  opacity: 1;
+}
+
+.menu__title .far.fa-heart {
+  position: absolute;
+  right: 30px;
+  vertical-align: top;
+  color: black;
+  display: inline-block;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.menu__title .far.fa-heart:hover {
+  opacity: 0;
+}
+/*# sourceMappingURL=menu.css.map */

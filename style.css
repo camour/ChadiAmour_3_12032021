@@ -8,12 +8,58 @@
   src: url("./Polices/Shrikhand-Regular.otf") format("otf");
 }
 
+.btn {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+.btn-row {
+  margin-bottom: 0px;
+}
+
+.btn-row a {
+  color: black;
+}
+
+.btn-row .fa-arrow-left {
+  vertical-align: middle;
+}
+
 body {
   font-family: 'My_Roboto', serif;
 }
 
+@font-face {
+  font-family: "My_Roboto";
+  src: url("./Polices/Roboto-Black.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "My_Shrikhand";
+  src: url("./Polices/Shrikhand-Regular.otf") format("otf");
+}
+
 .header {
-  width: 90%;
+  width: 99%;
   margin: auto;
   text-align: center;
 }
@@ -32,7 +78,7 @@ body {
 }
 
 .map {
-  width: 90%;
+  width: 99%;
   margin: auto;
   text-align: center;
   background-color: #DCDCDC;
@@ -74,7 +120,7 @@ body {
 }
 
 .view {
-  width: 90%;
+  width: 99%;
   margin: auto;
   text-align: center;
   background-color: #EAEAEA;
@@ -98,41 +144,24 @@ body {
   padding: 20px;
 }
 
-.btn {
+.btn--explorate {
   border-radius: 2rem;
-  background: radial-gradient(circle, #9356DC 0%, #FF79DA 100%);
-  position: relative;
-  z-index: 1;
-  padding: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(#ae80e5), to(#782cd3));
+  background: linear-gradient(#FF79DA, #ae80e5, #782cd3);
   color: white;
-  margin-bottom: 50px;
   -webkit-box-shadow: 5px 5px 5px #c9c5c5;
           box-shadow: 5px 5px 5px #c9c5c5;
 }
 
-.btn:hover::after {
-  opacity: 1;
-}
-
 .btn::after {
-  content: "";
-  position: absolute;
-  border-radius: 2rem;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: radial-gradient(circle, #ae80e5 0%, #fface8 100%);
   -webkit-box-shadow: 8px 8px 5px #c9c5c5;
           box-shadow: 8px 8px 5px #c9c5c5;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
+  border-radius: 2rem;
+  background: radial-gradient(circle, #ae80e5 0%, #fface8 100%);
 }
 
 .process {
-  width: 90%;
+  width: 99%;
   margin: auto;
   text-align: left;
   margin-top: 40px;
@@ -182,7 +211,7 @@ body {
 }
 
 .summary-restaurants {
-  width: 90%;
+  width: 99%;
   margin: auto;
   text-align: left;
   background-color: #EAEAEA;
@@ -200,9 +229,28 @@ body {
   margin-top: 25px;
 }
 
+.restaurant__new {
+  z-index: 1;
+  position: relative;
+}
+
+.restaurant__new::after {
+  content: "Nouveau";
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  right: 7px;
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  background-color: #85dcc7;
+  color: #278870;
+  border-radius: 0.2rem;
+}
+
 .restaurant #restaurant__picture1 {
   width: 100%;
-  height: 200px;
+  height: 180px;
   background-image: url("./Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -212,7 +260,7 @@ body {
 
 .restaurant #restaurant__picture2 {
   width: 100%;
-  height: 200px;
+  height: 180px;
   background-image: url("./Maquettes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,7 +270,7 @@ body {
 
 .restaurant #restaurant__picture3 {
   width: 100%;
-  height: 200px;
+  height: 180px;
   background-image: url("./Maquettes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -232,7 +280,7 @@ body {
 
 .restaurant #restaurant__picture4 {
   width: 100%;
-  height: 200px;
+  height: 180px;
   background-image: url("./Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -246,13 +294,37 @@ body {
   width: 50%;
 }
 
-.restaurant .fa-heart {
-  position: relative;
-  right: -30%;
+.restaurant .fas.fa-heart {
+  position: absolute;
+  right: 30px;
+  vertical-align: top;
+  opacity: 0;
+  color: #9356DC;
+  display: inline-block;
+  margin-top: 25px;
+  z-index: 2;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.restaurant .fas.fa-heart:hover {
+  opacity: 1;
+}
+
+.restaurant .far.fa-heart {
+  position: absolute;
+  right: 30px;
   vertical-align: top;
   color: black;
   display: inline-block;
   margin-top: 25px;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.restaurant .far.fa-heart:hover {
+  opacity: 0;
 }
 
 footer {

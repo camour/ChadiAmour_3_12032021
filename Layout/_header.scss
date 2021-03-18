@@ -1,7 +1,9 @@
+@import "../Base/font";
 @import "../Utils/mixins";
 .header
 {
-    @include align-block();
+    @include align-block(99%);
+    
     
     &__logo
     {

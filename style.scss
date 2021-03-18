@@ -2,6 +2,7 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
 @import "./Base/font";
+@import "./Composants/btn";
 
 
 
@@ -14,7 +15,7 @@ body
 
 .map
 {
-    @include align-block();
+    @include align-block(99%);
     @include background-color(#DCDCDC);
     padding-top: 20px;
     padding-bottom: 20px;
@@ -44,7 +45,7 @@ body
 
 .view
 {
-    @include align-block();
+    @include align-block(99%);
     @include background-color(#EAEAEA);
     position: relative;
     
@@ -69,47 +70,26 @@ body
 
 .btn
 {
-    border-radius: 2rem;
-    
-    background: radial-gradient(circle, $primaryColor 0%, $secondaryColor 100%);
-    position: relative;
-    z-index: 1;
-    padding: 15px;
-    color: white;
-    margin-bottom: 50px;
-    box-shadow: 5px 5px 5px #c9c5c5;
-
-    &:hover
+    &--explorate
     {
-       
-        &::after
-        {
-            opacity: 1;
-        }
+        border-radius: 2rem;
+        //background: radial-gradient(circle, $primaryColor 0%, $secondaryColor 100%);
+        background: linear-gradient($secondaryColor, lighten($primaryColor,10), darken($primaryColor, 10));
+        color: white;
+        box-shadow: 5px 5px 5px #c9c5c5;
     }
 
     &::after
     {
-        content: "";
-        position: absolute;
-        border-radius: 2rem;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: radial-gradient(circle, lighten($primaryColor, 10) 0%, lighten($secondaryColor, 10) 100%);
         box-shadow: 8px 8px 5px #c9c5c5;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 200ms;
-
-        
+        @include btn-after(2rem, radial-gradient(circle, lighten($primaryColor, 10) 0%, lighten($secondaryColor, 10) 100%));
     }
 }
 
+
 .process
 {
-    @include align-block(90%, left);
+    @include align-block(99%, left);
     margin-top: 40px;
     position: relative;
 
@@ -160,13 +140,13 @@ body
 
 .summary-restaurants
 {
-    @include align-block(90%, left);
+    @include align-block(99%, left);
     @include background-color(#EAEAEA);
     padding: 7px;
     position: relative;
 
 }
-
+//$restaurants: ('restaurant_picture1': , 'restaurant_picture2': , 'restaurant_picture3':, 'restaurant_picture4': );
 .restaurant
 {
     border-radius: 15px;
@@ -174,33 +154,15 @@ body
     background-color: white;
     position: relative;
     margin-top: 25px;
-
-    #restaurant__picture1
-    {
-             
-        @include create-image('./Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg', cover, 100%, 200px);
-    }
-
     
-    #restaurant__picture2
+    @include restaurant__new();          
+        
+    @each $key, $value in $images
     {
-             
-        @include create-image('./Maquettes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg', cover, 100%, 200px);
-    }
-
-   
-    #restaurant__picture3
-    {
-             
-        @include create-image('./Maquettes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg', cover, 100%, 200px);
-    }
-
-   
-
-    #restaurant__picture4
-    {
-             
-        @include create-image('./Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg', cover, 100%, 200px);
+        #{$key}
+        {
+            @include create-image(nth($value,1), nth($value,2), nth($value,3), nth($value,4));
+        }
     }
 
     &__description
@@ -209,16 +171,8 @@ body
         display: inline-block;
         width: 50%;        
     }
-
-    .fa-heart
-    {             
-        position: relative;
-        right: -30%;
-        vertical-align: top;
-        color: black;
-        display: inline-block; 
-        margin-top: 25px;          
-    }
+    @import "./Composants/heart_btn";
+    
 }
 
 @import "./Layout/footer";

@@ -28,3 +28,34 @@
     background-color: $color;
 }
 
+
+@mixin btn-after($border_radius, $background_color)
+{
+    border-radius: $border_radius;
+    background: $background_color;   
+}
+
+@mixin restaurant__new()
+{
+    &__new
+    {
+        z-index: 1;
+        position: relative;
+
+        &::after
+        {
+            content: "Nouveau";
+            position: absolute;
+            z-index: 2;
+            top: 30px;
+            right: 7px;
+            width: 80px;
+            padding: 5px;
+            text-align: center;
+            background-color: darken($tertiaryColor, 5);
+            color: darken($color: $tertiaryColor, $amount: 40);
+            border-radius: 0.2rem;
+        }
+
+    }
+}
