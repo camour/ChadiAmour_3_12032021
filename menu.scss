@@ -1,12 +1,70 @@
+@import "./Base/font";
 @import "./Utils/variables";
 @import "./Utils/mixins";
 @import "./Layout/header";
 @import "./Composants/btn";
 @import "./Layout/footer";
 
+@mixin head-choices()
+{
+    h3
+    {
+        @include align-block(85%, left);
+    }
+    hr 
+    {
+        width: 50px;
+        color: $tertiaryColor;
+        margin-left: 0px;
+    }
+} 
+
+@mixin menu-choices()
+{
+    position: relative;
+            @include align-block(85%, left);
+            border-radius: 1rem;
+            background-color: white;
+            border: 1px darken(#EAEAEA, 10) solid;
+            box-shadow: 3px 3px 1.5px darken(#EAEAEA, 20);
+            padding: 7px;
+            margin-bottom: 20px;
+            
+            h4
+            {
+                font-family: "My_Shrikhand";
+                margin-bottom: 5px;
+                margin-left: 5px;
+                margin-top: 10px;
+                font-size: 15pt;
+                
+            }
+            p
+            {
+                position: relative;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                margin-left: 5px;
+                display: inline-block;
+                font-size: 10pt;
+                                
+            }
+            a 
+            {
+                
+                display: inline-block;
+                position: absolute;
+                right: 10px;
+                top: 50px;
+                text-decoration: none;
+                color: black;
+            }
+}
+
 body
 {
     @include align-block(99%, left);
+    font-family: "My_Roboto";
 }
 .header
 {
@@ -31,11 +89,12 @@ body
     &__title
     {
         position: relative;
+        @include align-block(85%, left);
         @include flex(row, flex-start, center);
         h2
         {
+            font-family: "My_Shrikhand";
             font-style: italic;
-            margin-left: 10px;
         }
     
         @import "./Composants/heart_btn"; 
@@ -43,4 +102,55 @@ body
     }
 
     
+}
+
+.entries
+{
+    position: relative;
+    @include head-choices();
+    
+    &-list
+    {
+        position: relative;
+        @include flex(column, space-between, center);
+        &__entry
+        {
+            @include menu-choices();
+        }
+    }
+
+}
+
+.plates
+{
+    position: relative;
+    @include head-choices();
+
+    &-list
+    {
+        position: relative;
+        @include flex(column, space-between, center);
+        &__plate
+        {
+            @include menu-choices();
+        }
+    }
+
+}
+
+.desserts
+{
+    position: relative;
+    @include head-choices();
+    
+    &-list
+    {
+        position: relative;
+        @include flex(column, space-between, center);
+        &__dessert
+        {
+            @include menu-choices();
+        }
+    }
+
 }
