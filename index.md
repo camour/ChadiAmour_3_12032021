@@ -23,7 +23,7 @@
         <div class="view">
             <h2>Réservez le menu qui vous convient</h3>
             <p>Découvrez des restaurants d'exception,<br/>selectionnés par nos soins</p>
-            <button class="btn">Explorez nos restaurants</button>
+            <button class="btn btn--explorate">Explorez nos restaurants</button>
         </div>
 
         <div class="process">
@@ -39,42 +39,42 @@
         <div class="summary-restaurants">
             <h2>Restaurants</h2>
             <div class="restaurant">
-                <div id="restaurant__picture1"></div>
+                <a href="#"><div class="restaurant__new" id="restaurant__picture1"></div></a>
                 <div class="restaurant__description">
                     <h4>La palette du goût</h4>
                     <p>Ménilmontant</p>
                 </div>
-                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i><i class="far fa-heart"></i>
                 
             </div>
 
             <div class="restaurant">
-                <div id="restaurant__picture2"></div>
+                <a href="#"><div class="restaurant__new" id="restaurant__picture2"></div></a>
                 <div class="restaurant__description">
                     <h4>La note enchantée</h4>
                     <p>Charonne</p>
                 </div>
-                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i><i class="far fa-heart"></i>
                 
             </div>
 
             <div class="restaurant">
-                <div id="restaurant__picture3"></div>
+                <a href="#"><div class="restaurant__new" id="restaurant__picture3"></div></a>
                 <div class="restaurant__description">
-                    <h4>A la française</h4>
+                    <h4>À la française</h4>
                     <p>cité Rouge</p>
                 </div>
-                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i><i class="far fa-heart"></i>
                 
             </div>
 
             <div class="restaurant">
-                <div id="restaurant__picture4"></div>
+                <a href="#"><div class="restaurant__new" id="restaurant__picture4"></div></a>
                 <div class="restaurant__description">
                     <h4>Le délice des sens</h4>
                     <p>Folie-Méricourt</p>
                 </div>
-                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i><i class="far fa-heart"></i>
                 
             </div>
             
