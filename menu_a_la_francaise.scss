@@ -1,0 +1,9 @@
+
+@import "./Layout/menu";
+
+
+.cover
+{
+    @include align-block(99%);
+    @include create-image('./Maquettes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg', cover, 99%, 200px);
+}

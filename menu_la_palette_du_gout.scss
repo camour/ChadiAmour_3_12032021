@@ -1,0 +1,9 @@
+
+@import "./Layout/menu";
+
+
+.cover
+{
+    @include align-block(99%);
+    @include create-image('./Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg', cover, 99%, 200px);
+}

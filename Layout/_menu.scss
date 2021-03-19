@@ -1,10 +1,10 @@
-@import "./Base/font";
-@import "./Utils/variables";
-@import "./Utils/mixins";
-@import "./Layout/header";
-@import "./Composants/btn";
-@import "./Composants/heart_btn";
-@import "./Layout/footer";
+@import "../Base/font";
+@import "../Utils/variables";
+@import "../Utils/mixins";
+@import "./header";
+@import "../Composants/btn";
+@import "../Composants/heart_btn";
+@import "./footer";
 
 @mixin head-choices()
 {
@@ -113,11 +113,7 @@ body
     @include flex(row, space-between, center);
 }
 
-.cover
-{
-    @include align-block(99%);
-    @include create-image('./Maquettes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg', cover, 99%, 200px);
-}
+
 
 .menu
 {   
@@ -158,8 +154,7 @@ body
         &__entry
         {
             @include menu-choices();
-           
-           
+                     
             
         }
     }
@@ -199,26 +194,3 @@ body
     }
 
 }
-
-            
-
-            
-            /*.price:active + .check
-            {
-                transform: scale(1);
-            }
-            
-            .check
-            {
-                display: inline-block;
-                position: absolute;
-                right: 1px;
-                top: 50px;
-                text-decoration: none;
-                color: black;
-                transform: scale(0.1);
-                transition: transform 1s;
-
-            }*/
-
-           
