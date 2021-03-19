@@ -38,17 +38,24 @@
 }
 
 .btn {
+  width: 175px;
+  margin: auto;
   position: relative;
   z-index: 1;
   padding: 15px;
   margin-bottom: 50px;
 }
 
-.btn:hover::after {
-  opacity: 1;
+.btn--color {
+  border-radius: 2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(#ae80e5), to(#782cd3));
+  background: linear-gradient(#FF79DA, #ae80e5, #782cd3);
+  color: white;
+  -webkit-box-shadow: 5px 5px 5px #c9c5c5;
+          box-shadow: 5px 5px 5px #c9c5c5;
 }
 
-.btn::after {
+.btn--color::after {
   content: "";
   position: absolute;
   top: 0;
@@ -59,6 +66,14 @@
   z-index: -1;
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
+  -webkit-box-shadow: 8px 8px 5px #c9c5c5;
+          box-shadow: 8px 8px 5px #c9c5c5;
+  border-radius: 2rem;
+  background: radial-gradient(circle, #ae80e5 0%, #fface8 100%);
+}
+
+.btn:hover::after {
+  opacity: 1;
 }
 
 .btn-row {
@@ -588,6 +603,12 @@ body {
   transition: transform 1.5s, -webkit-transform 1.5s;
   margin: 42%;
   color: white;
+}
+
+.bloc-btn {
+  width: 90%;
+  margin: auto;
+  text-align: center;
 }
 
 .cover {

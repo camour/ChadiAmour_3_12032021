@@ -31,6 +31,17 @@
 
 @mixin btn-after($border_radius, $background_color)
 {
+    content: "";
+    position: absolute;        
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 200ms;
+    box-shadow: 8px 8px 5px #c9c5c5;
     border-radius: $border_radius;
     background: $background_color;   
 }

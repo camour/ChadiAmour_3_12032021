@@ -69,23 +69,6 @@ body
     }
 }
 
-.btn
-{
-    &--explorate
-    {
-        border-radius: 2rem;
-        //background: radial-gradient(circle, $primaryColor 0%, $secondaryColor 100%);
-        background: linear-gradient($secondaryColor, lighten($primaryColor,10), darken($primaryColor, 10));
-        color: white;
-        box-shadow: 5px 5px 5px #c9c5c5;
-    }
-
-    &::after
-    {
-        box-shadow: 8px 8px 5px #c9c5c5;
-        @include btn-after(2rem, radial-gradient(circle, lighten($primaryColor, 10) 0%, lighten($secondaryColor, 10) 100%));
-    }
-}
 
 
 .process

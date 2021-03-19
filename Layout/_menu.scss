@@ -194,3 +194,8 @@ body
     }
 
 }
+
+.bloc-btn
+{
+    @include align-block();
+}
