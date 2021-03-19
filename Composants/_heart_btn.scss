@@ -1,5 +1,7 @@
 @import "../Utils/variables";
 
+@mixin heart-btn($margin-top)
+{
     .fas.fa-heart
     {             
         position: absolute;
@@ -8,7 +10,7 @@
         opacity: 0;
         color: $primaryColor;
         display: inline-block; 
-        //margin-top: 25px;
+        margin-top: $margin-top;
         z-index: 2;        
         
         transition: opacity 1s;
@@ -25,7 +27,7 @@
         vertical-align: top;
         color: black;
         display: inline-block; 
-        //margin-top: 25px;  
+        margin-top: $margin-top;  
         z-index: 1;      
         
         transition: opacity 1s;
@@ -35,3 +37,4 @@
             opacity: 0;
         }
     }
+}

@@ -3,6 +3,7 @@
 @import "./Utils/mixins";
 @import "./Base/font";
 @import "./Composants/btn";
+@import "./Composants/heart_btn";
 
 
 
@@ -171,7 +172,8 @@ body
         display: inline-block;
         width: 50%;        
     }
-    @import "./Composants/heart_btn";
+   
+    @include heart-btn(25px);
     
 }
 

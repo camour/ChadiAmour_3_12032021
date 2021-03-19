@@ -1,14 +1,27 @@
 @import "../Utils/mixins";
 footer
 {
+    position: relative;
     @include align-block(99%, left);
     background-color: rgb(73, 72, 72);
     color: white;
 
+    .footer__logo
+    {
+        //@include align-block(100%, left);        
+        @include create-image("./Maquettes_Ohmyfood/images/logo/ohmyfood.png", auto, 80%, 70px);
+        transform: scale(0.5);          
+        padding: 0px;
+        margin-left: 0px;  
+        position: relative;
+        left: -60px;
+        margin-bottom: 0px; 
+    }
+
     ul
     {
         list-style-type: none;
-        
+        margin-top: 0px;               
         padding-left: 12px;
     }
     

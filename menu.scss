@@ -3,6 +3,7 @@
 @import "./Utils/mixins";
 @import "./Layout/header";
 @import "./Composants/btn";
+@import "./Composants/heart_btn";
 @import "./Layout/footer";
 
 @mixin head-choices()
@@ -49,7 +50,7 @@
                 font-size: 10pt;
                                 
             }
-            a 
+            .price
             {
                 
                 display: inline-block;
@@ -57,7 +58,48 @@
                 right: 10px;
                 top: 50px;
                 text-decoration: none;
-                color: black;
+                color: black; 
+                transition: transform 1s;
+                &:active
+                {                   
+            
+                    transform: translate(-70px, 0vh);
+                    & + .check
+                    {
+                        transform: scaleX(1);
+                        .fa-check-circle
+                        {
+                            transform: rotate(0deg);
+                        }
+                    }
+
+            
+                }
+            }
+
+            .check
+            {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                display: inline-block;
+                border-radius: 0px 1rem 1rem 0px;                
+                background-color: $tertiaryColor;
+                transform-origin: right center;
+                transform: scaleX(0);
+                transition: transform 1s;
+                width: 60px;
+                height: 100%;
+                
+                .fa-check-circle
+                {
+                    transform: rotate(-180deg);
+                    transition: transform 1.5s;
+                    margin: 42%;
+                    color: white;   
+                                   
+                }
+               
             }
 }
 
@@ -96,8 +138,8 @@ body
             font-family: "My_Shrikhand";
             font-style: italic;
         }
-    
-        @import "./Composants/heart_btn"; 
+            
+        @include heart-btn(0px);
         
     }
 
@@ -116,6 +158,9 @@ body
         &__entry
         {
             @include menu-choices();
+           
+           
+            
         }
     }
 
@@ -154,3 +199,26 @@ body
     }
 
 }
+
+            
+
+            
+            /*.price:active + .check
+            {
+                transform: scale(1);
+            }
+            
+            .check
+            {
+                display: inline-block;
+                position: absolute;
+                right: 1px;
+                top: 50px;
+                text-decoration: none;
+                color: black;
+                transform: scale(0.1);
+                transition: transform 1s;
+
+            }*/
+
+           

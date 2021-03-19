@@ -74,6 +74,7 @@
 }
 
 footer {
+  position: relative;
   width: 99%;
   margin: auto;
   text-align: left;
@@ -81,8 +82,26 @@ footer {
   color: white;
 }
 
+footer .footer__logo {
+  width: 80%;
+  height: 70px;
+  background-image: url("./Maquettes_Ohmyfood/images/logo/ohmyfood.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  padding: 0px;
+  margin-left: 0px;
+  position: relative;
+  left: -60px;
+  margin-bottom: 0px;
+}
+
 footer ul {
   list-style-type: none;
+  margin-top: 0px;
   padding-left: 12px;
 }
 
@@ -192,6 +211,7 @@ body {
   opacity: 0;
   color: #9356DC;
   display: inline-block;
+  margin-top: 0px;
   z-index: 2;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
@@ -207,6 +227,7 @@ body {
   vertical-align: top;
   color: black;
   display: inline-block;
+  margin-top: 0px;
   z-index: 1;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
@@ -280,13 +301,62 @@ body {
   font-size: 10pt;
 }
 
-.entries-list__entry a {
+.entries-list__entry .price {
   display: inline-block;
   position: absolute;
   right: 10px;
   top: 50px;
   text-decoration: none;
   color: black;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.entries-list__entry .price:active {
+  -webkit-transform: translate(-70px, 0vh);
+          transform: translate(-70px, 0vh);
+}
+
+.entries-list__entry .price:active + .check {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.entries-list__entry .price:active + .check .fa-check-circle {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.entries-list__entry .check {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: inline-block;
+  border-radius: 0px 1rem 1rem 0px;
+  background-color: #99E2D0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  width: 60px;
+  height: 100%;
+}
+
+.entries-list__entry .check .fa-check-circle {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  margin: 42%;
+  color: white;
 }
 
 .plates {
@@ -353,13 +423,62 @@ body {
   font-size: 10pt;
 }
 
-.plates-list__plate a {
+.plates-list__plate .price {
   display: inline-block;
   position: absolute;
   right: 10px;
   top: 50px;
   text-decoration: none;
   color: black;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.plates-list__plate .price:active {
+  -webkit-transform: translate(-70px, 0vh);
+          transform: translate(-70px, 0vh);
+}
+
+.plates-list__plate .price:active + .check {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.plates-list__plate .price:active + .check .fa-check-circle {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.plates-list__plate .check {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: inline-block;
+  border-radius: 0px 1rem 1rem 0px;
+  background-color: #99E2D0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  width: 60px;
+  height: 100%;
+}
+
+.plates-list__plate .check .fa-check-circle {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  margin: 42%;
+  color: white;
 }
 
 .desserts {
@@ -426,12 +545,79 @@ body {
   font-size: 10pt;
 }
 
-.desserts-list__dessert a {
+.desserts-list__dessert .price {
   display: inline-block;
   position: absolute;
   right: 10px;
   top: 50px;
   text-decoration: none;
   color: black;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
+
+.desserts-list__dessert .price:active {
+  -webkit-transform: translate(-70px, 0vh);
+          transform: translate(-70px, 0vh);
+}
+
+.desserts-list__dessert .price:active + .check {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.desserts-list__dessert .price:active + .check .fa-check-circle {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.desserts-list__dessert .check {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: inline-block;
+  border-radius: 0px 1rem 1rem 0px;
+  background-color: #99E2D0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  width: 60px;
+  height: 100%;
+}
+
+.desserts-list__dessert .check .fa-check-circle {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  margin: 42%;
+  color: white;
+}
+
+/*.price:active + .check
+            {
+                transform: scale(1);
+            }
+            
+            .check
+            {
+                display: inline-block;
+                position: absolute;
+                right: 1px;
+                top: 50px;
+                text-decoration: none;
+                color: black;
+                transform: scale(0.1);
+                transition: transform 1s;
+
+            }*/
 /*# sourceMappingURL=menu.css.map */
