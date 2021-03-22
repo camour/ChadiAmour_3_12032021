@@ -31,6 +31,7 @@
   padding: 15px;
   margin-bottom: 50px; }
   .btn--color {
+    position: relative;
     border-radius: 2rem;
     background: linear-gradient(#FF79DA, #ae80e5, #782cd3);
     color: white;
@@ -204,18 +205,18 @@ body {
         .entries-list__entry .price:active {
           transform: translate(-70px, 0vh); }
           .entries-list__entry .price:active + .check {
-            transform: scaleX(1); }
+            transform: translate(-70px, 0vh); }
             .entries-list__entry .price:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .entries-list__entry .check {
+        border: 2px black solid;
         position: absolute;
-        right: 0px;
+        right: -30px;
         top: 0px;
         display: inline-block;
         border-radius: 0px 1rem 1rem 0px;
         background-color: #99E2D0;
         transform-origin: right center;
-        transform: scaleX(0);
         transition: transform 1s;
         width: 60px;
         height: 100%; }
@@ -276,18 +277,18 @@ body {
         .plates-list__plate .price:active {
           transform: translate(-70px, 0vh); }
           .plates-list__plate .price:active + .check {
-            transform: scaleX(1); }
+            transform: translate(-70px, 0vh); }
             .plates-list__plate .price:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .plates-list__plate .check {
+        border: 2px black solid;
         position: absolute;
-        right: 0px;
+        right: -30px;
         top: 0px;
         display: inline-block;
         border-radius: 0px 1rem 1rem 0px;
         background-color: #99E2D0;
         transform-origin: right center;
-        transform: scaleX(0);
         transition: transform 1s;
         width: 60px;
         height: 100%; }
@@ -348,18 +349,18 @@ body {
         .desserts-list__dessert .price:active {
           transform: translate(-70px, 0vh); }
           .desserts-list__dessert .price:active + .check {
-            transform: scaleX(1); }
+            transform: translate(-70px, 0vh); }
             .desserts-list__dessert .price:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .desserts-list__dessert .check {
+        border: 2px black solid;
         position: absolute;
-        right: 0px;
+        right: -30px;
         top: 0px;
         display: inline-block;
         border-radius: 0px 1rem 1rem 0px;
         background-color: #99E2D0;
         transform-origin: right center;
-        transform: scaleX(0);
         transition: transform 1s;
         width: 60px;
         height: 100%; }

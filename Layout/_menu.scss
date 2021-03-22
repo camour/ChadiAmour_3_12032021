@@ -23,84 +23,90 @@
 @mixin menu-choices()
 {
     position: relative;
-            @include align-block(85%, left);
-            border-radius: 1rem;
-            background-color: white;
-            border: 1px darken(#EAEAEA, 10) solid;
-            box-shadow: 3px 3px 1.5px darken(#EAEAEA, 20);
-            padding: 7px;
-            margin-bottom: 20px;
+    @include align-block(85%, left);
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px darken(#EAEAEA, 10) solid;
+    box-shadow: 3px 3px 1.5px darken(#EAEAEA, 20);
+    padding: 7px;
+    margin-bottom: 20px;
             
-            h4
-            {
-                font-family: "My_Shrikhand";
-                margin-bottom: 5px;
-                margin-left: 5px;
-                margin-top: 10px;
-                font-size: 15pt;
+    h4
+    {
+        font-family: "My_Shrikhand";
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-size: 15pt;
                 
-            }
-            p
-            {
-                position: relative;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                margin-left: 5px;
-                display: inline-block;
-                font-size: 10pt;
+    }
+    p
+    {
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        font-size: 10pt;
                                 
-            }
-            .price
-            {
+    }
+    .price
+    {
                 
-                display: inline-block;
-                position: absolute;
-                right: 10px;
-                top: 50px;
-                text-decoration: none;
-                color: black; 
-                transition: transform 1s;
-                &:active
-                {                   
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 50px;
+        text-decoration: none;
+        color: black; 
+        transition: transform 1s;
+        &:active
+        {                   
             
-                    transform: translate(-70px, 0vh);
-                    & + .check
-                    {
-                        transform: scaleX(1);
-                        .fa-check-circle
-                        {
-                            transform: rotate(0deg);
-                        }
-                    }
-
-            
-                }
-            }
-
-            .check
+            transform: translate(-70px, 0vh);
+            & + .check
             {
-                position: absolute;
-                right: 0px;
-                top: 0px;
-                display: inline-block;
-                border-radius: 0px 1rem 1rem 0px;                
-                background-color: $tertiaryColor;
-                transform-origin: right center;
-                transform: scaleX(0);
-                transition: transform 1s;
-                width: 60px;
-                height: 100%;
+                //display: block;
+                //transform: scaleX(1);
+                transform: translate(-70px, 0vh);
                 
                 .fa-check-circle
                 {
-                    transform: rotate(-180deg);
-                    transition: transform 1.5s;
-                    margin: 42%;
-                    color: white;   
-                                   
+                    transform: rotate(0deg);
                 }
-               
             }
+
+            
+        }
+    }
+
+    .check
+    {
+        border: 2px black solid;
+        position: absolute;
+        right: -30px;
+        top: 0px;
+        display: inline-block;
+        border-radius: 0px 1rem 1rem 0px;                
+        background-color: $tertiaryColor;
+        transform-origin: right center;
+        //display: none;
+        //transform: scaleX(0);
+        //transform: translate(-70px, 0vh);
+        transition: transform 1s;
+        width: 60px;
+        height: 100%;
+                
+        .fa-check-circle
+        {
+            transform: rotate(-180deg);
+            transition: transform 1.5s;
+            margin: 42%;
+            color: white;   
+                                   
+        }
+               
+    }
 }
 
 body
@@ -149,6 +155,7 @@ body
     
     &-list
     {
+        
         position: relative;
         @include flex(column, space-between, center);
         &__entry
