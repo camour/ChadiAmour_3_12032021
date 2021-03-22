@@ -8,7 +8,7 @@
     &__logo
     {
         @include align-block(100%);        
-        @include create-image("./Maquettes_Ohmyfood/images/logo/ohmyfood.png", auto, 100%, 100px);
+        @include create-image("../Maquettes_Ohmyfood/images/logo/ohmyfood.png", auto, 100%, 100px);
           
     }
 }

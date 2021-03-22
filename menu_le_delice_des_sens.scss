@@ -5,5 +5,5 @@
 .cover
 {
     @include align-block(99%);
-    @include create-image('./Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg', cover, 99%, 200px);
+    @include create-image('../Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg', cover, 99%, 200px);
 }
