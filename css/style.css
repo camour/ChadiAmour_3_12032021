@@ -1,9 +1,9 @@
 @font-face {
   font-family: "My_Roboto";
-  src: url("./Polices/Roboto-Black.ttf") format("TrueType"); }
+  src: url("../Polices/Roboto-Black.ttf"); }
 @font-face {
   font-family: "My_Shrikhand";
-  src: url("./Polices/Shrikhand-Regular.otf") format("otf"); }
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
 .btn {
   z-index: 1;
   padding: 15px;
@@ -42,10 +42,10 @@ body {
 
 @font-face {
   font-family: "My_Roboto";
-  src: url("./Polices/Roboto-Black.ttf") format("TrueType"); }
+  src: url("../Polices/Roboto-Black.ttf"); }
 @font-face {
   font-family: "My_Shrikhand";
-  src: url("./Polices/Shrikhand-Regular.otf") format("otf"); }
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
 .header {
   width: 99%;
   margin: auto;
@@ -166,7 +166,7 @@ body {
       content: "Nouveau";
       position: absolute;
       z-index: 2;
-      top: 30px;
+      top: 20px;
       right: 7px;
       width: 80px;
       padding: 5px;
@@ -240,25 +240,30 @@ footer {
   margin: auto;
   text-align: left;
   background-color: #494848;
-  color: white; }
+  color: white;
+  padding: 20px; }
   footer .footer__logo {
-    width: 80%;
-    height: 70px;
-    background-image: url("../Maquettes_Ohmyfood/images/logo/ohmyfood.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    border-radius: 10px 10px 0px 0px;
-    transform: scale(0.5);
-    padding: 0px;
-    margin-left: 0px;
-    position: relative;
-    left: -60px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
     margin-bottom: 0px; }
+    @media (min-width: 800px) {
+      footer .footer__logo {
+        margin: auto; } }
   footer ul {
     list-style-type: none;
     margin-top: 0px;
     padding-left: 12px; }
+    @media (min-width: 800px) {
+      footer ul {
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; } }
   footer a {
     display: inline-block;
     display: flex;

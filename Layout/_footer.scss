@@ -5,16 +5,26 @@ footer
     @include align-block(99%, left);
     background-color: rgb(73, 72, 72);
     color: white;
+    padding: 20px;
 
     .footer__logo
     {
-        //@include align-block(100%, left);        
-        @include create-image("../Maquettes_Ohmyfood/images/logo/ohmyfood.png", auto, 80%, 70px);
-        transform: scale(0.5);          
-        padding: 0px;
-        margin-left: 0px;  
-        position: relative;
-        left: -60px;
+        @include align-block(300px, center);        
+        //@include create-image("../Maquettes_Ohmyfood/images/logo/ohmyfood.png", auto, 80%, 70px);
+        //transform: scale(0.5);          
+        
+        font-size: 1.5rem;
+        font-weight: bold;        
+        font-style: italic;
+        //margin-left: 0px;  
+        //position: relative;
+        //left: -60px;
+        @include screen-only
+        {
+            margin: auto;
+        }
+        
+        
         margin-bottom: 0px; 
     }
     
@@ -23,6 +33,11 @@ footer
         list-style-type: none;
         margin-top: 0px;               
         padding-left: 12px;
+        @include screen-only
+        {
+            height: 100px;
+            @include flex(row, space-around, center);
+        }
     }
     
     a

@@ -28,8 +28,9 @@
     background-color: white;
     border: 1px darken(#EAEAEA, 10) solid;
     box-shadow: 3px 3px 1.5px darken(#EAEAEA, 20);
-    padding: 7px;
+    padding: 0px;
     margin-bottom: 20px;
+    
             
     h4
     {
@@ -38,6 +39,7 @@
         margin-left: 5px;
         margin-top: 10px;
         font-size: 15pt;
+        width: 350px;
                 
     }
     p
@@ -50,26 +52,39 @@
         font-size: 10pt;
                                 
     }
+   
     .price
-    {
-                
-        display: inline-block;
+    {          
+        
         position: absolute;
-        right: 10px;
-        top: 50px;
+        right: -50px;        
+        top: 0px;
         text-decoration: none;
-        color: black; 
-        transition: transform 1s;
-        &:active
+        color: black;
+        width: 150px;
+        height: 100%;
+        
+        &__link
+        {
+            display: inline-block;            
+            position: relative;
+            top: 20px;
+            right: -70px;
+            width: 30px;
+                        
+            cursor: pointer;
+            transition: transform 0.4s;        
+        }
+        &__link:active
         {                   
+            transform: translate(-7vh, 0vh);
             
-            transform: translate(-70px, 0vh);
             & + .check
             {
-                //display: block;
-                //transform: scaleX(1);
-                transform: translate(-70px, 0vh);
                 
+                transform: translate(-7vh, 0vh);
+                
+                               
                 .fa-check-circle
                 {
                     transform: rotate(0deg);
@@ -78,29 +93,35 @@
 
             
         }
+
+       
+
     }
+
+    
 
     .check
     {
-        border: 2px black solid;
+       
+        z-index: -1;
         position: absolute;
-        right: -30px;
-        top: 0px;
+        right: 0;
+        top: 0;
+        border-radius: 0rem 1rem 1rem 0rem;
+               
         display: inline-block;
-        border-radius: 0px 1rem 1rem 0px;                
-        background-color: $tertiaryColor;
-        transform-origin: right center;
-        //display: none;
-        //transform: scaleX(0);
-        //transform: translate(-70px, 0vh);
-        transition: transform 1s;
-        width: 60px;
+                     
+        background-color: $tertiaryColor;        
+        
+        transition: all 0.4s;
+        width: 50px;
         height: 100%;
+      
                 
         .fa-check-circle
         {
             transform: rotate(-180deg);
-            transition: transform 1.5s;
+            transition: transform 0.4s;
             margin: 42%;
             color: white;   
                                    
@@ -153,13 +174,24 @@ body
     position: relative;
     @include head-choices();
     
+    
     &-list
     {
         
         position: relative;
         @include flex(column, space-between, center);
+        @include screen-only
+        {
+            @include flex(row, space-between, center);
+        }
         &__entry
         {
+            @include screen-only
+            {
+               width: 350px;
+            }
+            
+            
             @include menu-choices();
                      
             
@@ -177,8 +209,16 @@ body
     {
         position: relative;
         @include flex(column, space-between, center);
+        @include screen-only
+        {
+            @include flex(row, space-between, center);
+        }
         &__plate
         {
+            @include screen-only
+            {
+               width: 350px;
+            }
             @include menu-choices();
         }
     }
@@ -194,8 +234,16 @@ body
     {
         position: relative;
         @include flex(column, space-between, center);
+        @include screen-only
+        {
+            @include flex(row, space-between, center);
+        }
         &__dessert
         {
+            @include screen-only
+            {
+               width: 350px;
+            }
             @include menu-choices();
         }
     }

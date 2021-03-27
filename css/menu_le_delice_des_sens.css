@@ -1,15 +1,15 @@
 @font-face {
   font-family: "My_Roboto";
-  src: url("./Polices/Roboto-Black.ttf") format("TrueType"); }
+  src: url("../Polices/Roboto-Black.ttf"); }
 @font-face {
   font-family: "My_Shrikhand";
-  src: url("./Polices/Shrikhand-Regular.otf") format("otf"); }
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
 @font-face {
   font-family: "My_Roboto";
-  src: url("./Polices/Roboto-Black.ttf") format("TrueType"); }
+  src: url("../Polices/Roboto-Black.ttf"); }
 @font-face {
   font-family: "My_Shrikhand";
-  src: url("./Polices/Shrikhand-Regular.otf") format("otf"); }
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
 .header {
   width: 99%;
   margin: auto;
@@ -65,25 +65,30 @@ footer {
   margin: auto;
   text-align: left;
   background-color: #494848;
-  color: white; }
+  color: white;
+  padding: 20px; }
   footer .footer__logo {
-    width: 80%;
-    height: 70px;
-    background-image: url("../Maquettes_Ohmyfood/images/logo/ohmyfood.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    border-radius: 10px 10px 0px 0px;
-    transform: scale(0.5);
-    padding: 0px;
-    margin-left: 0px;
-    position: relative;
-    left: -60px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
     margin-bottom: 0px; }
+    @media (min-width: 800px) {
+      footer .footer__logo {
+        margin: auto; } }
   footer ul {
     list-style-type: none;
     margin-top: 0px;
     padding-left: 12px; }
+    @media (min-width: 800px) {
+      footer ul {
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; } }
   footer a {
     display: inline-block;
     display: flex;
@@ -170,6 +175,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center; }
+    @media (min-width: 800px) {
+      .entries-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; } }
     .entries-list__entry {
       position: relative;
       width: 85%;
@@ -179,14 +190,18 @@ body {
       background-color: white;
       border: 1px #d1d1d1 solid;
       box-shadow: 3px 3px 1.5px #b7b7b7;
-      padding: 7px;
+      padding: 0px;
       margin-bottom: 20px; }
+      @media (min-width: 800px) {
+        .entries-list__entry {
+          width: 350px; } }
       .entries-list__entry h4 {
         font-family: "My_Shrikhand";
         margin-bottom: 5px;
         margin-left: 5px;
         margin-top: 10px;
-        font-size: 15pt; }
+        font-size: 15pt;
+        width: 350px; }
       .entries-list__entry p {
         position: relative;
         margin-top: 5px;
@@ -195,34 +210,41 @@ body {
         display: inline-block;
         font-size: 10pt; }
       .entries-list__entry .price {
-        display: inline-block;
         position: absolute;
-        right: 10px;
-        top: 50px;
+        right: -50px;
+        top: 0px;
         text-decoration: none;
         color: black;
-        transition: transform 1s; }
-        .entries-list__entry .price:active {
-          transform: translate(-70px, 0vh); }
-          .entries-list__entry .price:active + .check {
-            transform: translate(-70px, 0vh); }
-            .entries-list__entry .price:active + .check .fa-check-circle {
+        width: 150px;
+        height: 100%; }
+        .entries-list__entry .price__link {
+          display: inline-block;
+          position: relative;
+          top: 20px;
+          right: -70px;
+          width: 30px;
+          cursor: pointer;
+          transition: transform 0.4s; }
+        .entries-list__entry .price__link:active {
+          transform: translate(-7vh, 0vh); }
+          .entries-list__entry .price__link:active + .check {
+            transform: translate(-7vh, 0vh); }
+            .entries-list__entry .price__link:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .entries-list__entry .check {
-        border: 2px black solid;
+        z-index: -1;
         position: absolute;
-        right: -30px;
-        top: 0px;
+        right: 0;
+        top: 0;
+        border-radius: 0rem 1rem 1rem 0rem;
         display: inline-block;
-        border-radius: 0px 1rem 1rem 0px;
         background-color: #99E2D0;
-        transform-origin: right center;
-        transition: transform 1s;
-        width: 60px;
+        transition: all 0.4s;
+        width: 50px;
         height: 100%; }
         .entries-list__entry .check .fa-check-circle {
           transform: rotate(-180deg);
-          transition: transform 1.5s;
+          transition: transform 0.4s;
           margin: 42%;
           color: white; }
 
@@ -242,6 +264,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center; }
+    @media (min-width: 800px) {
+      .plates-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; } }
     .plates-list__plate {
       position: relative;
       width: 85%;
@@ -251,14 +279,18 @@ body {
       background-color: white;
       border: 1px #d1d1d1 solid;
       box-shadow: 3px 3px 1.5px #b7b7b7;
-      padding: 7px;
+      padding: 0px;
       margin-bottom: 20px; }
+      @media (min-width: 800px) {
+        .plates-list__plate {
+          width: 350px; } }
       .plates-list__plate h4 {
         font-family: "My_Shrikhand";
         margin-bottom: 5px;
         margin-left: 5px;
         margin-top: 10px;
-        font-size: 15pt; }
+        font-size: 15pt;
+        width: 350px; }
       .plates-list__plate p {
         position: relative;
         margin-top: 5px;
@@ -267,34 +299,41 @@ body {
         display: inline-block;
         font-size: 10pt; }
       .plates-list__plate .price {
-        display: inline-block;
         position: absolute;
-        right: 10px;
-        top: 50px;
+        right: -50px;
+        top: 0px;
         text-decoration: none;
         color: black;
-        transition: transform 1s; }
-        .plates-list__plate .price:active {
-          transform: translate(-70px, 0vh); }
-          .plates-list__plate .price:active + .check {
-            transform: translate(-70px, 0vh); }
-            .plates-list__plate .price:active + .check .fa-check-circle {
+        width: 150px;
+        height: 100%; }
+        .plates-list__plate .price__link {
+          display: inline-block;
+          position: relative;
+          top: 20px;
+          right: -70px;
+          width: 30px;
+          cursor: pointer;
+          transition: transform 0.4s; }
+        .plates-list__plate .price__link:active {
+          transform: translate(-7vh, 0vh); }
+          .plates-list__plate .price__link:active + .check {
+            transform: translate(-7vh, 0vh); }
+            .plates-list__plate .price__link:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .plates-list__plate .check {
-        border: 2px black solid;
+        z-index: -1;
         position: absolute;
-        right: -30px;
-        top: 0px;
+        right: 0;
+        top: 0;
+        border-radius: 0rem 1rem 1rem 0rem;
         display: inline-block;
-        border-radius: 0px 1rem 1rem 0px;
         background-color: #99E2D0;
-        transform-origin: right center;
-        transition: transform 1s;
-        width: 60px;
+        transition: all 0.4s;
+        width: 50px;
         height: 100%; }
         .plates-list__plate .check .fa-check-circle {
           transform: rotate(-180deg);
-          transition: transform 1.5s;
+          transition: transform 0.4s;
           margin: 42%;
           color: white; }
 
@@ -314,6 +353,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center; }
+    @media (min-width: 800px) {
+      .desserts-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; } }
     .desserts-list__dessert {
       position: relative;
       width: 85%;
@@ -323,14 +368,18 @@ body {
       background-color: white;
       border: 1px #d1d1d1 solid;
       box-shadow: 3px 3px 1.5px #b7b7b7;
-      padding: 7px;
+      padding: 0px;
       margin-bottom: 20px; }
+      @media (min-width: 800px) {
+        .desserts-list__dessert {
+          width: 350px; } }
       .desserts-list__dessert h4 {
         font-family: "My_Shrikhand";
         margin-bottom: 5px;
         margin-left: 5px;
         margin-top: 10px;
-        font-size: 15pt; }
+        font-size: 15pt;
+        width: 350px; }
       .desserts-list__dessert p {
         position: relative;
         margin-top: 5px;
@@ -339,34 +388,41 @@ body {
         display: inline-block;
         font-size: 10pt; }
       .desserts-list__dessert .price {
-        display: inline-block;
         position: absolute;
-        right: 10px;
-        top: 50px;
+        right: -50px;
+        top: 0px;
         text-decoration: none;
         color: black;
-        transition: transform 1s; }
-        .desserts-list__dessert .price:active {
-          transform: translate(-70px, 0vh); }
-          .desserts-list__dessert .price:active + .check {
-            transform: translate(-70px, 0vh); }
-            .desserts-list__dessert .price:active + .check .fa-check-circle {
+        width: 150px;
+        height: 100%; }
+        .desserts-list__dessert .price__link {
+          display: inline-block;
+          position: relative;
+          top: 20px;
+          right: -70px;
+          width: 30px;
+          cursor: pointer;
+          transition: transform 0.4s; }
+        .desserts-list__dessert .price__link:active {
+          transform: translate(-7vh, 0vh); }
+          .desserts-list__dessert .price__link:active + .check {
+            transform: translate(-7vh, 0vh); }
+            .desserts-list__dessert .price__link:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .desserts-list__dessert .check {
-        border: 2px black solid;
+        z-index: -1;
         position: absolute;
-        right: -30px;
-        top: 0px;
+        right: 0;
+        top: 0;
+        border-radius: 0rem 1rem 1rem 0rem;
         display: inline-block;
-        border-radius: 0px 1rem 1rem 0px;
         background-color: #99E2D0;
-        transform-origin: right center;
-        transition: transform 1s;
-        width: 60px;
+        transition: all 0.4s;
+        width: 50px;
         height: 100%; }
         .desserts-list__dessert .check .fa-check-circle {
           transform: rotate(-180deg);
-          transition: transform 1.5s;
+          transition: transform 0.4s;
           margin: 42%;
           color: white; }
 
