@@ -34,7 +34,8 @@ body
         margin-left: 15px;
         font-family: 'My_Roboto';
         color: rgb(73, 72, 72);
-        display: inline-block;
+        @include display-inline-block(middle, left);
+        //display: inline-block;
         
     }
     .fa-map-marker-alt
@@ -79,56 +80,56 @@ body
     {
         @include flex(row, space-around, center);
     }
-
-    .etape
-    {
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 20px;
-        @include background-color(#F7F7F7);
-        box-shadow: 5px 5px 5px #EAEAEA;
-        position: relative;
-        @include screen-only
-        {
-            width: 200px;            
-            
-        }
-        
-        p 
-        {
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle;
-            margin-right: 25;
-        }
-        &__circle
-        {
-            padding: 5px;
-            width: 20px;
-            height: 20px;
-            color: white;            
-            background-color: $primaryColor;
-            border-radius: 20px;   
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle; 
-            margin-right: 25px;        
-                     
-        }
-        .fas, .far
-        {
-            transform: scale(1.4);
-            margin-right: 25px;
-            color: rgb(73, 72, 72);           
-        }
-        &__X
-        {
-            position: relative;
-            left: -30px;
-        }
-    }
-    
 }
+.etape
+{
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    @include background-color(#F7F7F7);
+    box-shadow: 5px 5px 5px #EAEAEA;
+    position: relative;
+    @include screen-only
+    {
+        width: 300px;         
+    }
+        
+    p 
+    {
+        @include display-inline-block(middle, center);
+        //display: inline-block;
+        //text-align: center;
+        //vertical-align: middle;
+        //margin-right: 25px;
+    }
+    &__circle
+    {
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        color: white;            
+        background-color: $primaryColor;
+        border-radius: 20px;
+        @include display-inline-block(middle, center);  
+        //display: inline-block;
+        //text-align: center;
+        //vertical-align: middle; 
+        margin-right: 25px;        
+                     
+    }
+    .fas, .far
+    {
+        transform: scale(1.4);
+        margin-right: 25px;
+        color: rgb(73, 72, 72);           
+    }
+    &__X
+    {
+        position: relative;
+        left: -30px;
+    }
+}
+    
 
 .summary-restaurants
 {
@@ -167,7 +168,10 @@ body
     &__description
     {
         padding-left: 6px;
-        display: inline-block;
+        @include display-inline-block(middle, left);
+        //display: inline-block;
+        //vertical-align: middle;
+        //text-align: left;
         width: 50%;        
     }
    

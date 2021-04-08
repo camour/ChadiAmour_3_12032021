@@ -13,6 +13,13 @@
     align-items: $align-items;
 }
 
+@mixin display-inline-block($position, $text-align)
+{
+    display: inline-block;
+    vertical-align: $position;
+    text-align: $text-align;
+}
+
 @mixin create-image($urlImage, $background_size, $width, $height)
 {
     width: $width;
