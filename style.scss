@@ -75,6 +75,10 @@ body
     @include align-block(99%, left);
     margin-top: 40px;
     position: relative;
+    @include screen-only
+    {
+        @include flex(row, space-around, center);
+    }
 
     .etape
     {
@@ -84,6 +88,11 @@ body
         @include background-color(#F7F7F7);
         box-shadow: 5px 5px 5px #EAEAEA;
         position: relative;
+        @include screen-only
+        {
+            width: 200px;            
+            
+        }
         
         p 
         {
@@ -127,6 +136,12 @@ body
     @include background-color(#EAEAEA);
     padding: 7px;
     position: relative;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    @include screen-only
+    {
+        @include flex(row, space-between, center);
+    }
 
 }
 //$restaurants: ('restaurant_picture1': , 'restaurant_picture2': , 'restaurant_picture3':, 'restaurant_picture4': );
@@ -136,10 +151,11 @@ body
     @include align-block(320px, left);    
     background-color: white;
     position: relative;
-    margin-top: 25px;
+    margin: 30px;
+    
     
     @include restaurant__new();          
-        
+     
     @each $key, $value in $images
     {
         #{$key}
