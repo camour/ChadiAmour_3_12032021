@@ -22,3 +22,15 @@
         transform: scale(1);
     }
 }
+
+@keyframes pop_up 
+{
+    from
+    {
+        transform: scale(0);
+    }
+    to
+    {
+        transform: scale(1);
+    }
+}

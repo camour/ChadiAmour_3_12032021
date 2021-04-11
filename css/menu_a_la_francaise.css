@@ -59,6 +59,21 @@
   .btn-row .fa-arrow-left {
     vertical-align: middle; }
 
+@keyframes spinner_loader {
+  0%,99% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+@keyframes page_loader {
+  0%, 99% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+@keyframes pop_up {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
 @font-face {
   font-family: "My_Roboto";
   src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
@@ -94,13 +109,15 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center; } }
+        align-items: center;
+        flex-wrap: wrap; } }
   footer a {
     display: inline-block;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     color: white;
     text-decoration: none; }
   footer i {
@@ -119,7 +136,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap; }
 
 .menu {
   width: 99%;
@@ -137,7 +155,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     .menu__title h2 {
       font-family: "My_Shrikhand";
       font-style: italic; }
@@ -166,6 +185,7 @@ body {
         opacity: 0; }
 
 .entries {
+  animation: pop_up 1s 0s both;
   position: relative; }
   .entries h3 {
     width: 85%;
@@ -182,14 +202,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     @media (min-width: 800px) {
       .entries-list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center; } }
+        align-items: center;
+        flex-wrap: wrap; } }
     .entries-list__entry {
+      z-index: 1;
       position: relative;
       width: 85%;
       margin: auto;
@@ -217,49 +240,9 @@ body {
         margin-left: 5px;
         display: inline-block;
         font-family: serif; }
-      .entries-list__entry .price {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        text-decoration: none;
-        color: black;
-        width: 150px;
-        height: 100%; }
-        .entries-list__entry .price__link {
-          display: inline-block;
-          position: relative;
-          top: 50px;
-          right: -90px;
-          width: 30px;
-          text-decoration: none;
-          color: black;
-          cursor: pointer;
-          transition: transform 0.4s; }
-        .entries-list__entry .price__link:active {
-          transform: translate(-7vh, 0vh); }
-          .entries-list__entry .price__link:active + .check {
-            z-index: 1;
-            transform: translate(-7vh, 0vh); }
-            .entries-list__entry .price__link:active + .check .fa-check-circle {
-              transform: rotate(0deg); }
-      .entries-list__entry .check {
-        z-index: -1;
-        position: absolute;
-        right: -50px;
-        top: 0;
-        border-radius: 0rem 1rem 1rem 0rem;
-        display: inline-block;
-        background-color: #99E2D0;
-        transition: all 0.4s;
-        width: 50px;
-        height: 100%; }
-        .entries-list__entry .check .fa-check-circle {
-          transform: rotate(-180deg);
-          transition: transform 0.4s;
-          margin: 42%;
-          color: white; }
 
 .plates {
+  animation: pop_up 1s 0.25s both;
   position: relative; }
   .plates h3 {
     width: 85%;
@@ -276,13 +259,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     @media (min-width: 800px) {
       .plates-list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center; } }
+        align-items: center;
+        flex-wrap: wrap; } }
     .plates-list__plate {
       position: relative;
       width: 85%;
@@ -311,49 +296,9 @@ body {
         margin-left: 5px;
         display: inline-block;
         font-family: serif; }
-      .plates-list__plate .price {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        text-decoration: none;
-        color: black;
-        width: 150px;
-        height: 100%; }
-        .plates-list__plate .price__link {
-          display: inline-block;
-          position: relative;
-          top: 50px;
-          right: -90px;
-          width: 30px;
-          text-decoration: none;
-          color: black;
-          cursor: pointer;
-          transition: transform 0.4s; }
-        .plates-list__plate .price__link:active {
-          transform: translate(-7vh, 0vh); }
-          .plates-list__plate .price__link:active + .check {
-            z-index: 1;
-            transform: translate(-7vh, 0vh); }
-            .plates-list__plate .price__link:active + .check .fa-check-circle {
-              transform: rotate(0deg); }
-      .plates-list__plate .check {
-        z-index: -1;
-        position: absolute;
-        right: -50px;
-        top: 0;
-        border-radius: 0rem 1rem 1rem 0rem;
-        display: inline-block;
-        background-color: #99E2D0;
-        transition: all 0.4s;
-        width: 50px;
-        height: 100%; }
-        .plates-list__plate .check .fa-check-circle {
-          transform: rotate(-180deg);
-          transition: transform 0.4s;
-          margin: 42%;
-          color: white; }
 
 .desserts {
+  animation: pop_up 1s 0.5s both;
   position: relative; }
   .desserts h3 {
     width: 85%;
@@ -370,13 +315,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     @media (min-width: 800px) {
       .desserts-list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center; } }
+        align-items: center;
+        flex-wrap: wrap; } }
     .desserts-list__dessert {
       position: relative;
       width: 85%;
@@ -405,52 +352,53 @@ body {
         margin-left: 5px;
         display: inline-block;
         font-family: serif; }
-      .desserts-list__dessert .price {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        text-decoration: none;
-        color: black;
-        width: 150px;
-        height: 100%; }
-        .desserts-list__dessert .price__link {
-          display: inline-block;
-          position: relative;
-          top: 50px;
-          right: -90px;
-          width: 30px;
-          text-decoration: none;
-          color: black;
-          cursor: pointer;
-          transition: transform 0.4s; }
-        .desserts-list__dessert .price__link:active {
-          transform: translate(-7vh, 0vh); }
-          .desserts-list__dessert .price__link:active + .check {
-            z-index: 1;
-            transform: translate(-7vh, 0vh); }
-            .desserts-list__dessert .price__link:active + .check .fa-check-circle {
-              transform: rotate(0deg); }
-      .desserts-list__dessert .check {
-        z-index: -1;
-        position: absolute;
-        right: -50px;
-        top: 0;
-        border-radius: 0rem 1rem 1rem 0rem;
-        display: inline-block;
-        background-color: #99E2D0;
-        transition: all 0.4s;
-        width: 50px;
-        height: 100%; }
-        .desserts-list__dessert .check .fa-check-circle {
-          transform: rotate(-180deg);
-          transition: transform 0.4s;
-          margin: 42%;
-          color: white; }
 
 .bloc-btn {
   width: 90%;
   margin: auto;
   text-align: center; }
+
+.price {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  text-decoration: none;
+  color: black;
+  width: 150px;
+  height: 100%;
+  overflow: hidden; }
+  .price__link {
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    right: -110px;
+    width: 30px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.4s; }
+  .price__link:active {
+    transform: translate(-7vh, 0vh); }
+    .price__link:active + .check {
+      transform: translate(-7vh, 0vh); }
+      .price__link:active + .check .fa-check-circle {
+        transform: rotate(0deg); }
+
+.check {
+  position: absolute;
+  right: -50px;
+  top: 0;
+  border-radius: 0rem 1rem 1rem 0rem;
+  display: inline-block;
+  background-color: #99E2D0;
+  transition: all 0.4s ease;
+  width: 50px;
+  height: 100%; }
+  .check .fa-check-circle {
+    transform: rotate(-180deg);
+    transition: transform 0.4s;
+    margin: 42%;
+    color: white; }
 
 .cover {
   width: 99%;

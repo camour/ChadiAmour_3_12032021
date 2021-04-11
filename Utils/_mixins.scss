@@ -11,6 +11,7 @@
     flex-direction: $direction;
     justify-content: $justify-content;
     align-items: $align-items;
+    flex-wrap: wrap;
 }
 
 @mixin display-inline-block($position, $text-align)
