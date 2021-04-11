@@ -4,6 +4,7 @@
 @import "./Base/font";
 @import "./Composants/btn";
 @import "./Composants/heart_btn";
+@import "./Utils/keyframes";
 
 
 body
@@ -12,6 +13,27 @@ body
 }
 
 @import "./Layout/header";
+
+
+
+.loader
+{
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    
+    background: url('../Maquettes_Ohmyfood/GIF/giphy.gif') 50% 50% no-repeat;
+
+    animation: spinner_loader 3s forwards;
+    
+}
+.page_body
+{
+    animation: page_loader 3s both;
+}
 
 .map
 {
@@ -176,6 +198,10 @@ body
     }
    
     @include heart-btn(25px);
+    p
+    {
+        font-family: serif;
+    }
     
 }
 

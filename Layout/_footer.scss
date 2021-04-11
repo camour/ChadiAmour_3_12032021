@@ -1,4 +1,5 @@
 @import "../Utils/mixins";
+@import "../Base/font";
 footer
 {
     position: relative;
@@ -14,6 +15,7 @@ footer
         //transform: scale(0.5);          
         
         font-size: 1.5rem;
+        //font-family: 'My_Shrikhand', serif;
         font-weight: bold;        
         font-style: italic;
         //margin-left: 0px;  

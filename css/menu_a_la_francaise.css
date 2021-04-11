@@ -1,12 +1,12 @@
 @font-face {
   font-family: "My_Roboto";
-  src: url("../Polices/Roboto-Black.ttf"); }
+  src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
 @font-face {
   font-family: "My_Shrikhand";
   src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
 @font-face {
   font-family: "My_Roboto";
-  src: url("../Polices/Roboto-Black.ttf"); }
+  src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
 @font-face {
   font-family: "My_Shrikhand";
   src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
@@ -59,6 +59,12 @@
   .btn-row .fa-arrow-left {
     vertical-align: middle; }
 
+@font-face {
+  font-family: "My_Roboto";
+  src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
+@font-face {
+  font-family: "My_Shrikhand";
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
 footer {
   position: relative;
   width: 99%;
@@ -164,10 +170,12 @@ body {
   .entries h3 {
     width: 85%;
     margin: auto;
-    text-align: left; }
+    text-align: left;
+    font-family: serif;
+    font-weight: lighter; }
   .entries hr {
     width: 50px;
-    color: #99E2D0;
+    border: 2px solid #99E2D0;
     margin-left: 0px; }
   .entries-list {
     position: relative;
@@ -190,7 +198,7 @@ body {
       background-color: white;
       border: 1px #d1d1d1 solid;
       box-shadow: 3px 3px 1.5px #b7b7b7;
-      padding: 0px;
+      padding: 5px;
       margin-bottom: 20px; }
       @media (min-width: 800px) {
         .entries-list__entry {
@@ -208,10 +216,10 @@ body {
         margin-bottom: 5px;
         margin-left: 5px;
         display: inline-block;
-        font-size: 10pt; }
+        font-family: serif; }
       .entries-list__entry .price {
         position: absolute;
-        right: -50px;
+        right: 0px;
         top: 0px;
         text-decoration: none;
         color: black;
@@ -220,21 +228,24 @@ body {
         .entries-list__entry .price__link {
           display: inline-block;
           position: relative;
-          top: 20px;
-          right: -70px;
+          top: 50px;
+          right: -90px;
           width: 30px;
+          text-decoration: none;
+          color: black;
           cursor: pointer;
           transition: transform 0.4s; }
         .entries-list__entry .price__link:active {
           transform: translate(-7vh, 0vh); }
           .entries-list__entry .price__link:active + .check {
+            z-index: 1;
             transform: translate(-7vh, 0vh); }
             .entries-list__entry .price__link:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .entries-list__entry .check {
         z-index: -1;
         position: absolute;
-        right: 0;
+        right: -50px;
         top: 0;
         border-radius: 0rem 1rem 1rem 0rem;
         display: inline-block;
@@ -253,10 +264,12 @@ body {
   .plates h3 {
     width: 85%;
     margin: auto;
-    text-align: left; }
+    text-align: left;
+    font-family: serif;
+    font-weight: lighter; }
   .plates hr {
     width: 50px;
-    color: #99E2D0;
+    border: 2px solid #99E2D0;
     margin-left: 0px; }
   .plates-list {
     position: relative;
@@ -279,7 +292,7 @@ body {
       background-color: white;
       border: 1px #d1d1d1 solid;
       box-shadow: 3px 3px 1.5px #b7b7b7;
-      padding: 0px;
+      padding: 5px;
       margin-bottom: 20px; }
       @media (min-width: 800px) {
         .plates-list__plate {
@@ -297,10 +310,10 @@ body {
         margin-bottom: 5px;
         margin-left: 5px;
         display: inline-block;
-        font-size: 10pt; }
+        font-family: serif; }
       .plates-list__plate .price {
         position: absolute;
-        right: -50px;
+        right: 0px;
         top: 0px;
         text-decoration: none;
         color: black;
@@ -309,21 +322,24 @@ body {
         .plates-list__plate .price__link {
           display: inline-block;
           position: relative;
-          top: 20px;
-          right: -70px;
+          top: 50px;
+          right: -90px;
           width: 30px;
+          text-decoration: none;
+          color: black;
           cursor: pointer;
           transition: transform 0.4s; }
         .plates-list__plate .price__link:active {
           transform: translate(-7vh, 0vh); }
           .plates-list__plate .price__link:active + .check {
+            z-index: 1;
             transform: translate(-7vh, 0vh); }
             .plates-list__plate .price__link:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .plates-list__plate .check {
         z-index: -1;
         position: absolute;
-        right: 0;
+        right: -50px;
         top: 0;
         border-radius: 0rem 1rem 1rem 0rem;
         display: inline-block;
@@ -342,10 +358,12 @@ body {
   .desserts h3 {
     width: 85%;
     margin: auto;
-    text-align: left; }
+    text-align: left;
+    font-family: serif;
+    font-weight: lighter; }
   .desserts hr {
     width: 50px;
-    color: #99E2D0;
+    border: 2px solid #99E2D0;
     margin-left: 0px; }
   .desserts-list {
     position: relative;
@@ -368,7 +386,7 @@ body {
       background-color: white;
       border: 1px #d1d1d1 solid;
       box-shadow: 3px 3px 1.5px #b7b7b7;
-      padding: 0px;
+      padding: 5px;
       margin-bottom: 20px; }
       @media (min-width: 800px) {
         .desserts-list__dessert {
@@ -386,10 +404,10 @@ body {
         margin-bottom: 5px;
         margin-left: 5px;
         display: inline-block;
-        font-size: 10pt; }
+        font-family: serif; }
       .desserts-list__dessert .price {
         position: absolute;
-        right: -50px;
+        right: 0px;
         top: 0px;
         text-decoration: none;
         color: black;
@@ -398,21 +416,24 @@ body {
         .desserts-list__dessert .price__link {
           display: inline-block;
           position: relative;
-          top: 20px;
-          right: -70px;
+          top: 50px;
+          right: -90px;
           width: 30px;
+          text-decoration: none;
+          color: black;
           cursor: pointer;
           transition: transform 0.4s; }
         .desserts-list__dessert .price__link:active {
           transform: translate(-7vh, 0vh); }
           .desserts-list__dessert .price__link:active + .check {
+            z-index: 1;
             transform: translate(-7vh, 0vh); }
             .desserts-list__dessert .price__link:active + .check .fa-check-circle {
               transform: rotate(0deg); }
       .desserts-list__dessert .check {
         z-index: -1;
         position: absolute;
-        right: 0;
+        right: -50px;
         top: 0;
         border-radius: 0rem 1rem 1rem 0rem;
         display: inline-block;
