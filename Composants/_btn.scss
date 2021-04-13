@@ -12,6 +12,7 @@
     &--color
     {
         position: relative;
+        border: 0px;
         border-radius: 2rem;
         //background: radial-gradient(circle, $primaryColor 0%, $secondaryColor 100%);
         background: linear-gradient($secondaryColor, lighten($primaryColor,10), darken($primaryColor, 10));

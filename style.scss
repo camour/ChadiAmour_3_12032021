@@ -10,6 +10,8 @@
 body
 {
     font-family: 'My_Roboto', serif;
+    width: 100%;
+    margin: auto;
 }
 
 @import "./Layout/header";
@@ -27,7 +29,7 @@ body
     
     background: url('../Maquettes_Ohmyfood/GIF/giphy.gif') 50% 50% no-repeat;
 
-    animation: spinner_loader 3s forwards;
+    animation: spinner_loader 2s forwards;
     
 }
 .page_body
@@ -82,20 +84,21 @@ body
     }
     p
     {
-        color: rgb(73, 72, 72);
+        color: rgb(165, 163, 163);
+        font-weight: lighter;
         font-size: 0.9em;
     }
-    input 
-    {
-        padding: 20px;
-    }
+    
 }
 
-
+h2
+{
+    margin-left: 30px;
+}
 
 .process
 {
-    @include align-block(99%, left);
+    @include align-block(100%, left);
     margin-top: 40px;
     position: relative;
     @include screen-only
@@ -106,15 +109,16 @@ body
 .etape
 {
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 20px;
     @include background-color(#F7F7F7);
     box-shadow: 5px 5px 5px #EAEAEA;
     position: relative;
-    @include screen-only
-    {
-        width: 300px;         
-    }
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
         
     p 
     {
@@ -139,31 +143,39 @@ body
         margin-right: 25px;        
                      
     }
-    .fas, .far
-    {
-        transform: scale(1.4);
-        margin-right: 25px;
-        color: rgb(73, 72, 72);           
-    }
+    
     &__X
     {
         position: relative;
-        left: -30px;
+        left: -25px;
+        
+    }
+    .fas, .far
+    {
+        transform: scale(1.4);
+        position: relative;
+        //left: -30px;
+        margin-right: 25px;
+        color: rgb(73, 72, 72);           
     }
 }
     
 
 .summary-restaurants
 {
-    @include align-block(99%, left);
+    @include align-block(100%, left);
     @include background-color(#EAEAEA);
-    padding: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: relative;
     margin-top: 20px;
-    margin-bottom: 50px;
-    @include screen-only
+    
+    .bloc_restaurants
     {
-        @include flex(row, space-between, center);
+        @include screen-only
+        {
+            @include flex(row, space-between, center);
+        }
     }
 
 }
@@ -175,6 +187,7 @@ body
     background-color: white;
     position: relative;
     margin: 30px;
+    margin-bottom: 22px;
     
     
     @include restaurant__new();          
@@ -189,7 +202,7 @@ body
 
     &__description
     {
-        padding-left: 6px;
+        padding-left: 10px;
         @include display-inline-block(middle, left);
         //display: inline-block;
         //vertical-align: middle;

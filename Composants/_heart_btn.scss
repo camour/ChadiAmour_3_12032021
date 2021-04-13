@@ -12,7 +12,10 @@
         color: $primaryColor;
         display: inline-block; 
         margin-top: $margin-top;
-        z-index: 2;        
+        z-index: 2;     
+        background: -webkit-linear-gradient($primaryColor, lighten($primaryColor, 30));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   
         
         transition: opacity 1s;
 
