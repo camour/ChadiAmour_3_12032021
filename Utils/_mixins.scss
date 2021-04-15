@@ -79,10 +79,103 @@
     }
 }
 
+
+
 @mixin screen-only
 {
     @media (min-width: 800px)
     {
         @content;
     }
+}
+
+
+@mixin menu-choices()
+{
+    position: relative;
+    @include align-block(90%, left);
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px darken(#EAEAEA, 10) solid;
+    box-shadow: 3px 3px 1.5px darken(#EAEAEA, 20);
+    padding: 5px;
+    margin-bottom: 20px;
+    
+            
+    h4
+    {
+        font-family: "My_Shrikhand";
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-size: 15pt;
+        width: 350px;
+                
+    }
+    p
+    {
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        //font-size: 10pt;
+        font-family: serif;
+                                
+    }
+       
+}
+
+
+@mixin head-choices()
+{
+    margin-top: 30px;
+    h3
+    {
+        @include align-block(85%, left);
+        font-family: serif;
+        font-weight: lighter;
+    }
+    hr 
+    {
+        width: 50px;
+        border: 2px solid $tertiaryColor;
+        margin-left: 0px;
+    }
+} 
+
+@mixin menu-choices()
+{
+    position: relative;
+    @include align-block(90%, left);
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px darken(#EAEAEA, 10) solid;
+    box-shadow: 3px 3px 1.5px darken(#EAEAEA, 20);
+    padding: 5px;
+    margin-bottom: 20px;
+    
+            
+    h4
+    {
+        font-family: "My_Shrikhand";
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-top: 10px;
+        font-size: 15pt;
+        width: 350px;
+                
+    }
+    p
+    {
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        //font-size: 10pt;
+        font-family: serif;
+                                
+    }
+       
 }

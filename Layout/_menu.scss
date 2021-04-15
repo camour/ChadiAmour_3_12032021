@@ -7,62 +7,15 @@
 @import "../Utils/keyframes";
 @import "./footer";
 
-@mixin head-choices()
-{
-    h3
-    {
-        @include align-block(85%, left);
-        font-family: serif;
-        font-weight: lighter;
-    }
-    hr 
-    {
-        width: 50px;
-        border: 2px solid $tertiaryColor;
-        margin-left: 0px;
-    }
-} 
 
-@mixin menu-choices()
-{
-    position: relative;
-    @include align-block(85%, left);
-    border-radius: 1rem;
-    background-color: white;
-    border: 1px darken(#EAEAEA, 10) solid;
-    box-shadow: 3px 3px 1.5px darken(#EAEAEA, 20);
-    padding: 5px;
-    margin-bottom: 20px;
-    
-            
-    h4
-    {
-        font-family: "My_Shrikhand";
-        margin-bottom: 5px;
-        margin-left: 5px;
-        margin-top: 10px;
-        font-size: 15pt;
-        width: 350px;
-                
-    }
-    p
-    {
-        position: relative;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-left: 5px;
-        display: inline-block;
-        //font-size: 10pt;
-        font-family: serif;
-                                
-    }
-       
-}
 
 body
 {
-    @include align-block(99%, left);
+    //@include align-block(99%, left);
     font-family: "My_Roboto";
+    width: 100%;
+    margin: auto;
+    background-color: #EAEAEA;
 }
 .header
 {
@@ -73,22 +26,30 @@ body
 
 .menu
 {   
-    @include align-block(99%, left);
+    @include align-block(100%, left);
     position: relative;
     top: -20px;
    
     background-color: #EAEAEA;
-    border-radius: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+    margin-bottom: 0px;
     
     &__title
     {
         position: relative;
         @include align-block(85%, left);
+        
+        
         @include flex(row, flex-start, center);
         h2
         {
             font-family: "My_Shrikhand";
             font-style: italic;
+            @include screen-only
+            {
+                position: relative;
+                left: 50%;
+            }
         }
             
         @include heart-btn(0px);
@@ -187,7 +148,9 @@ body
 
 .bloc-btn
 {
-    @include align-block();
+    @include align-block(100%);
+    background-color: #EAEAEA;
+    margin-top: 0px;
 }
 
 
