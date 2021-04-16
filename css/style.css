@@ -70,7 +70,8 @@ body {
   src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
 .header {
   width: 99%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   position: relative;
   background-color: white; }
@@ -99,7 +100,8 @@ body {
 
 .map {
   width: 99%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   background-color: #DCDCDC;
   padding-top: 20px;
@@ -107,7 +109,8 @@ body {
   border-top: 2px #ccc7c7 solid; }
   .map__research {
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -128,13 +131,15 @@ body {
 
 .view {
   width: 99%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   background-color: #EAEAEA;
   position: relative; }
   .view h2 {
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     padding-top: 20px;
     font-family: serif; }
@@ -147,7 +152,8 @@ h2 {
 
 .process {
   width: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
   margin-top: 40px;
   position: relative; }
@@ -196,7 +202,8 @@ h2 {
 
 .summary-restaurants {
   width: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
   background-color: #EAEAEA;
   padding-top: 10px;
@@ -214,7 +221,8 @@ h2 {
 .restaurant {
   border-radius: 15px;
   width: 320px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
   background-color: white;
   position: relative;
@@ -312,7 +320,8 @@ h2 {
 footer {
   position: relative;
   width: 99%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
   background-color: #494848;
   color: white;
@@ -327,7 +336,8 @@ footer {
     @media (min-width: 800px) {
       footer .footer__logo {
         width: 300px;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center; } }
     @media (min-width: 800px) {
       footer .footer__logo {

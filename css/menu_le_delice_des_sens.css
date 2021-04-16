@@ -12,7 +12,8 @@
   src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
 .header {
   width: 99%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   position: relative;
   background-color: white; }
@@ -88,7 +89,8 @@
 footer {
   position: relative;
   width: 99%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
   background-color: #494848;
   color: white;
@@ -103,7 +105,8 @@ footer {
     @media (min-width: 800px) {
       footer .footer__logo {
         width: 300px;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center; } }
     @media (min-width: 800px) {
       footer .footer__logo {
@@ -150,7 +153,8 @@ body {
 
 .menu {
   width: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
   position: relative;
   top: -20px;
@@ -159,7 +163,8 @@ body {
   .menu__title {
     position: relative;
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
     display: flex;
     flex-direction: row;
@@ -207,7 +212,8 @@ body {
   margin-top: 30px; }
   .entries h3 {
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
     font-family: serif;
     font-weight: lighter; }
@@ -233,7 +239,8 @@ body {
       z-index: 1;
       position: relative;
       width: 340px;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
       text-align: left;
       border-radius: 1rem;
       background-color: white;
@@ -244,7 +251,8 @@ body {
       @media (min-width: 800px) {
         .entries-list__entry {
           width: 350px;
-          margin: auto;
+          margin-left: auto;
+          margin-right: auto;
           text-align: left; } }
       .entries-list__entry h4 {
         font-family: serif;
@@ -266,7 +274,8 @@ body {
   margin-top: 30px; }
   .plates h3 {
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
     font-family: serif;
     font-weight: lighter; }
@@ -292,7 +301,8 @@ body {
       z-index: 1;
       position: relative;
       width: 340px;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
       text-align: left;
       border-radius: 1rem;
       background-color: white;
@@ -303,7 +313,8 @@ body {
       @media (min-width: 800px) {
         .plates-list__plate {
           width: 350px;
-          margin: auto;
+          margin-left: auto;
+          margin-right: auto;
           text-align: left; } }
       .plates-list__plate h4 {
         font-family: serif;
@@ -325,7 +336,8 @@ body {
   margin-top: 30px; }
   .desserts h3 {
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
     font-family: serif;
     font-weight: lighter; }
@@ -351,7 +363,8 @@ body {
       z-index: 1;
       position: relative;
       width: 340px;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
       text-align: left;
       border-radius: 1rem;
       background-color: white;
@@ -362,7 +375,8 @@ body {
       @media (min-width: 800px) {
         .desserts-list__dessert {
           width: 350px;
-          margin: auto;
+          margin-left: auto;
+          margin-right: auto;
           text-align: left; } }
       .desserts-list__dessert h4 {
         font-family: serif;
@@ -380,7 +394,8 @@ body {
 
 .bloc-btn {
   width: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   background-color: #EAEAEA;
   margin-top: 20px;
@@ -433,7 +448,8 @@ body {
 
 .cover {
   width: 99%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   width: 99%;
   height: 200px;
