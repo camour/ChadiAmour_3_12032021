@@ -3,13 +3,15 @@
     <head>
         <meta charset="utf-8" />    
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./css/style.css" />
         <script src="https://kit.fontawesome.com/3c341fdad4.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
 
-       <header class="header">
+        <div class="loader"></div>
+        <div class="page_body">
+        <header class="header">
            <div class="header__logo">               
            </div>
         </header>
@@ -25,64 +27,66 @@
             <p>Découvrez des restaurants d'exception,<br/>selectionnés par nos soins</p>
             <button class="btn btn--color">Explorez nos restaurants</button>
         </div>
-
+        <h2>Fonctionnement</h2>
         <div class="process">
 
-            <h2>Fonctionnement</h2>
+            
             <div class="etape"><div class="etape__X"><div class="etape__circle">1</div><i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p></div></div>
-            <div class="etape"><div class="etape__X"><div class="etape__circle">2</div><i class="far fa-square"></i><p>Composez votre menu</p></div></div>
+            <div class="etape"><div class="etape__X"><div class="etape__circle">2</div><i class="fas fa-list"></i><p>Composez votre menu</p></div></div>
             <div class="etape"><div class="etape__X"><div class="etape__circle">3</div><i class="fas fa-utensils"></i><p>Dégustez au restaurant</p></div></div>
 
         </div>
 
-
+        
         <div class="summary-restaurants">
             <h2>Restaurants</h2>
-            <div class="restaurant">
-                <a href="./menu_la_palette_du_gout.html"><div class="restaurant__new" id="restaurant__picture1"></div></a>
-                <div class="restaurant__description">
-                    <h4>La palette du goût</h4>
-                    <p>Ménilmontant</p>
+            <div class="bloc_restaurants">
+                <div class="restaurant">
+                    <a href="./menu_la_palette_du_gout.html"><div class="restaurant__new" id="restaurant__picture1"></div></a>
+                    <div class="restaurant__description">
+                        <h4>La palette du goût</h4>
+                        <p>Ménilmontant</p>
+                    </div>
+                    <i class="fas fa-heart"></i><i class="far fa-heart"></i>
+                    
                 </div>
-                <i class="fas fa-heart"></i><i class="far fa-heart"></i>
-                
-            </div>
 
-            <div class="restaurant">
-                <a href="./menu_la_note_enchantee.html"><div class="restaurant__new" id="restaurant__picture2"></div></a>
-                <div class="restaurant__description">
-                    <h4>La note enchantée</h4>
-                    <p>Charonne</p>
+                <div class="restaurant">
+                    <a href="./menu_la_note_enchantee.html"><div class="restaurant__new" id="restaurant__picture2"></div></a>
+                    <div class="restaurant__description">
+                        <h4>La note enchantée</h4>
+                        <p>Charonne</p>
+                    </div>
+                    <i class="fas fa-heart"></i><i class="far fa-heart"></i>
+                    
                 </div>
-                <i class="fas fa-heart"></i><i class="far fa-heart"></i>
-                
-            </div>
 
-            <div class="restaurant">
-                <a href="./menu_a_la_francaise.html"><div class="restaurant__new" id="restaurant__picture3"></div></a>
-                <div class="restaurant__description">
-                    <h4>À la française</h4>
-                    <p>cité Rouge</p>
+                <div class="restaurant">
+                    <a href="./menu_a_la_francaise.html"><div class="restaurant__new" id="restaurant__picture3"></div></a>
+                    <div class="restaurant__description">
+                        <h4>À la française</h4>
+                        <p>cité Rouge</p>
+                    </div>
+                    <i class="fas fa-heart"></i><i class="far fa-heart"></i>
+                    
                 </div>
-                <i class="fas fa-heart"></i><i class="far fa-heart"></i>
-                
-            </div>
 
-            <div class="restaurant">
-                <a href="./menu_le_delice_des_sens.html"><div class="restaurant__new" id="restaurant__picture4"></div></a>
-                <div class="restaurant__description">
-                    <h4>Le délice des sens</h4>
-                    <p>Folie-Méricourt</p>
+                <div class="restaurant">
+                    <a href="./menu_le_delice_des_sens.html"><div class="restaurant__new" id="restaurant__picture4"></div></a>
+                    <div class="restaurant__description">
+                        <h4>Le délice des sens</h4>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <i class="fas fa-heart"></i><i class="far fa-heart"></i>
+                    
                 </div>
-                <i class="fas fa-heart"></i><i class="far fa-heart"></i>
-                
             </div>
             
 
         </div>
 
         <footer>
-            <div class="footer__logo"></div>
+            <div class="footer__logo">ohmyfood</div>
             <ul>
                 <li><a href="#"><i class="fas fa-utensils"></i><p> Proposer un restaurant </p></a></li>
                 <li><a><i class="fas fa-handshake"></i><p> Devenir partenaire </p></a></li>
@@ -91,7 +95,8 @@
             </ul>
         </footer>
                
-   
+
+    </div>
 
     </body>
 </html>
