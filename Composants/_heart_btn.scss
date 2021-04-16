@@ -13,7 +13,7 @@
         display: inline-block; 
         margin-top: $margin-top;
         z-index: 2;     
-        background: -webkit-linear-gradient($primaryColor, lighten($primaryColor, 30));
+        background: -webkit-linear-gradient($primaryColor, $secondaryColor);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;   
         
@@ -21,6 +21,7 @@
 
         &:hover
         {
+            cursor: pointer;
             opacity: 1;
         }
     }

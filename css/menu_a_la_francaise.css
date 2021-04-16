@@ -3,13 +3,13 @@
   src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
 @font-face {
   font-family: "My_Shrikhand";
-  src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
 @font-face {
   font-family: "My_Roboto";
   src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
 @font-face {
   font-family: "My_Shrikhand";
-  src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
 .header {
   width: 99%;
   margin: auto;
@@ -29,12 +29,14 @@
 .btn {
   z-index: 1;
   padding: 15px;
+  padding-left: 45px;
+  padding-right: 45px;
   margin-bottom: 50px; }
   .btn--color {
     position: relative;
     border: 0px;
     border-radius: 2rem;
-    background: linear-gradient(#FF79DA, #ae80e5, #782cd3);
+    background: radial-gradient(ellipse at 20px -20px, #FF79DA 0%, #9356DC 100%);
     color: white;
     box-shadow: 5px 5px 5px #c9c5c5; }
     .btn--color::after {
@@ -49,13 +51,14 @@
       transition: opacity 200ms;
       box-shadow: 8px 8px 5px #c9c5c5;
       border-radius: 2rem;
-      background: radial-gradient(circle, #ae80e5 0%, #fface8 100%); }
+      background: radial-gradient(ellipse at 30px 0px, #ff93e1 0%, #a16be0 100%); }
   .btn:hover::after {
     opacity: 1; }
 
 .btn-row {
   position: absolute;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  padding: 10px; }
   .btn-row a {
     color: black; }
   .btn-row .fa-arrow-left {
@@ -81,7 +84,7 @@
   src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
 @font-face {
   font-family: "My_Shrikhand";
-  src: url("../Polices/Shrikhand-Regular.otf") format("otf"); }
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
 footer {
   position: relative;
   width: 99%;
@@ -95,8 +98,7 @@ footer {
     width: 300px;
     margin-bottom: 20px;
     padding-left: 12px;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'My_Shrikhand', serif;
     font-style: italic; }
     @media (min-width: 800px) {
       footer .footer__logo {
@@ -153,11 +155,10 @@ body {
   position: relative;
   top: -20px;
   background-color: #EAEAEA;
-  border-radius: 1.5rem 1.5rem 0rem 0rem;
-  margin-bottom: 0px; }
+  border-radius: 1.5rem 1.5rem 0rem 0rem; }
   .menu__title {
     position: relative;
-    width: 85%;
+    width: 90%;
     margin: auto;
     text-align: left;
     display: flex;
@@ -181,11 +182,12 @@ body {
       display: inline-block;
       margin-top: 0px;
       z-index: 2;
-      background: -webkit-linear-gradient(#9356DC, #e4d5f6);
+      background: -webkit-linear-gradient(#9356DC, #FF79DA);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: opacity 1s; }
       .menu__title .fas.fa-heart:hover {
+        cursor: pointer;
         opacity: 1; }
     .menu__title .far.fa-heart {
       position: absolute;
@@ -204,7 +206,7 @@ body {
   position: relative;
   margin-top: 30px; }
   .entries h3 {
-    width: 85%;
+    width: 90%;
     margin: auto;
     text-align: left;
     font-family: serif;
@@ -230,7 +232,7 @@ body {
     .entries-list__entry {
       z-index: 1;
       position: relative;
-      width: 90%;
+      width: 340px;
       margin: auto;
       text-align: left;
       border-radius: 1rem;
@@ -241,13 +243,14 @@ body {
       margin-bottom: 20px; }
       @media (min-width: 800px) {
         .entries-list__entry {
-          width: 350px; } }
+          width: 350px;
+          margin: auto;
+          text-align: left; } }
       .entries-list__entry h4 {
-        font-family: "My_Shrikhand";
+        font-family: serif;
         margin-bottom: 5px;
         margin-left: 5px;
         margin-top: 10px;
-        font-size: 15pt;
         width: 350px; }
       .entries-list__entry p {
         position: relative;
@@ -262,7 +265,7 @@ body {
   position: relative;
   margin-top: 30px; }
   .plates h3 {
-    width: 85%;
+    width: 90%;
     margin: auto;
     text-align: left;
     font-family: serif;
@@ -286,8 +289,9 @@ body {
         align-items: center;
         flex-wrap: wrap; } }
     .plates-list__plate {
+      z-index: 1;
       position: relative;
-      width: 90%;
+      width: 340px;
       margin: auto;
       text-align: left;
       border-radius: 1rem;
@@ -298,13 +302,14 @@ body {
       margin-bottom: 20px; }
       @media (min-width: 800px) {
         .plates-list__plate {
-          width: 350px; } }
+          width: 350px;
+          margin: auto;
+          text-align: left; } }
       .plates-list__plate h4 {
-        font-family: "My_Shrikhand";
+        font-family: serif;
         margin-bottom: 5px;
         margin-left: 5px;
         margin-top: 10px;
-        font-size: 15pt;
         width: 350px; }
       .plates-list__plate p {
         position: relative;
@@ -319,7 +324,7 @@ body {
   position: relative;
   margin-top: 30px; }
   .desserts h3 {
-    width: 85%;
+    width: 90%;
     margin: auto;
     text-align: left;
     font-family: serif;
@@ -343,8 +348,9 @@ body {
         align-items: center;
         flex-wrap: wrap; } }
     .desserts-list__dessert {
+      z-index: 1;
       position: relative;
-      width: 90%;
+      width: 340px;
       margin: auto;
       text-align: left;
       border-radius: 1rem;
@@ -355,13 +361,14 @@ body {
       margin-bottom: 20px; }
       @media (min-width: 800px) {
         .desserts-list__dessert {
-          width: 350px; } }
+          width: 350px;
+          margin: auto;
+          text-align: left; } }
       .desserts-list__dessert h4 {
-        font-family: "My_Shrikhand";
+        font-family: serif;
         margin-bottom: 5px;
         margin-left: 5px;
         margin-top: 10px;
-        font-size: 15pt;
         width: 350px; }
       .desserts-list__dessert p {
         position: relative;
@@ -376,7 +383,8 @@ body {
   margin: auto;
   text-align: center;
   background-color: #EAEAEA;
-  margin-top: 0px; }
+  margin-top: 20px;
+  margin-bottom: 40px; }
 
 .price {
   position: absolute;
@@ -390,7 +398,7 @@ body {
   .price__link {
     display: inline-block;
     position: relative;
-    top: 50px;
+    top: 43px;
     right: -110px;
     width: 30px;
     text-decoration: none;
@@ -400,7 +408,10 @@ body {
   .price__link:active {
     transform: translate(-7vh, 0vh); }
     .price__link:active + .check {
-      transform: translate(-7vh, 0vh); }
+      transform: translate(-6vh, 0vh); }
+      @media (min-width: 800px) {
+        .price__link:active + .check {
+          transform: translate(-7.5vh, 0vh); } }
       .price__link:active + .check .fa-check-circle {
         transform: rotate(0deg); }
 

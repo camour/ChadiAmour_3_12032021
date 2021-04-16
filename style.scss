@@ -79,14 +79,15 @@ body
         
         @include align-block();
         padding-top: 20px;
-        font-family: 'My_Shrikhand', serif;
+        font-family: serif;
                
     }
     p
     {
-        color: rgb(165, 163, 163);
-        font-weight: lighter;
-        font-size: 0.9em;
+        color: rgb(104, 104, 104);
+        font-family: serif;
+        //font-weight: lighter;
+        //font-size: 0.9em;
     }
     
 }

@@ -23,9 +23,9 @@ footer
         }
                 
         
-        font-size: 1.5rem;
-        //font-family: 'My_Shrikhand', serif;
-        font-weight: bold;        
+        //font-size: 1.5rem;
+        font-family: 'My_Shrikhand', serif;
+        //font-weight: bold;        
         font-style: italic;
         
         @include screen-only

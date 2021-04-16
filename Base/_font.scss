@@ -7,5 +7,7 @@
 @font-face
 {
     font-family: "My_Shrikhand";
-	src: url('../Polices/Shrikhand-Regular.otf') format('otf');
+	src: url('../Polices/Shrikhand-Regular.otf') format('otf'),
+		url('../Polices/shrikhand-regular.woff2') format('woff2'),
+        url('../Polices/shrikhand-regular.woff') format('woff');
 }
