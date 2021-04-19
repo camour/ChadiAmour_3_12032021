@@ -176,8 +176,9 @@ body {
       font-style: italic; }
       @media (min-width: 800px) {
         .menu__title h2 {
-          position: relative;
-          left: 50%; } }
+          width: 300px;
+          margin-left: auto;
+          margin-right: auto; } }
     .menu__title .fas.fa-heart {
       position: absolute;
       right: 30px;

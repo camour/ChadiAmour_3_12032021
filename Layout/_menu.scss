@@ -47,8 +47,11 @@ body
             font-style: italic;
             @include screen-only
             {
-                position: relative;
-                left: 50%;
+                //position: relative;
+                //left: 50%;
+                width: 300px;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
             
