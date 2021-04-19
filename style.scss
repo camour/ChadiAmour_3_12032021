@@ -126,11 +126,7 @@ h2
         
     p 
     {
-        @include display-inline-block(middle, center);
-        //display: inline-block;
-        //text-align: center;
-        //vertical-align: middle;
-        //margin-right: 25px;
+        @include display-inline-block(middle, center);       
     }
     &__circle
     {
@@ -141,9 +137,7 @@ h2
         background-color: $primaryColor;
         border-radius: 20px;
         @include display-inline-block(middle, center);  
-        //display: inline-block;
-        //text-align: center;
-        //vertical-align: middle; 
+         
         margin-right: 25px;        
                      
     }
@@ -161,6 +155,11 @@ h2
         //left: -30px;
         margin-right: 25px;
         color: rgb(73, 72, 72);           
+    }
+
+    &:hover i
+    {
+        color: $primaryColor;
     }
 }
     
@@ -207,17 +206,19 @@ h2
     &__description
     {
         padding-left: 10px;
-        @include display-inline-block(middle, left);
-        //display: inline-block;
-        //vertical-align: middle;
-        //text-align: left;
+        @include display-inline-block(middle, left);        
         width: 50%;        
     }
    
     @include heart-btn(25px);
+    h4
+    {
+        margin-bottom: 4px;
+    }
     p
     {
         font-family: serif;
+        margin-top: 4px;
     }
     
 }
