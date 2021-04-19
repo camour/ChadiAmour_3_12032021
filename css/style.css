@@ -142,7 +142,8 @@ body {
     margin-right: auto;
     text-align: center;
     padding-top: 20px;
-    font-family: serif; }
+    font-family: serif;
+    margin-top: 0px; }
   .view p {
     color: #686868;
     font-family: serif; }

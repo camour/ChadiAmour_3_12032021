@@ -44,6 +44,7 @@ body
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 2px #ccc7c7 solid;
+   
   
     &__research
     {
@@ -74,12 +75,14 @@ body
     @include background-color(#EAEAEA);
     position: relative;
     
+    
     h2
     {
         
         @include align-block();
         padding-top: 20px;
         font-family: serif;
+        margin-top: 0px;
                
     }
     p
