@@ -65,7 +65,7 @@ body
 
 .entries
 {
-    animation: pop_up 1s 0s both;
+    animation: pop_up 3s 0s both;
     position: relative;
     @include head-choices();
     
@@ -91,7 +91,7 @@ body
 
 .plates
 {
-    animation: pop_up 1s 0.25s both;
+    animation: pop_up 3s 0.5s both;
    
     position: relative;
     @include head-choices();
@@ -114,7 +114,7 @@ body
 
 .desserts
 {
-    animation: pop_up 1s 0.5s both;    
+    animation: pop_up 3s 1s both;    
     position: relative;
     @include head-choices();
     
@@ -128,7 +128,7 @@ body
         }
         &__dessert
         {
-            z-index: 1;  
+            
             @include menu-choices();
         }
     }
@@ -150,64 +150,33 @@ body
 {          
         
     position: absolute;
-    right: 0px;        
+    right: -50px;        
     top: 0px;
     text-decoration: none;
-    color: black;
-    width: 150px;
-    height: 100%;
-    overflow: hidden;
+    color: black;    
+    height: 100%;    
         
         
     &__link
     {
         display: inline-block;            
         position: relative;
-        top: 43px;
-        right: -110px;
+        top: 23px;        
         width: 30px;
         text-decoration: none; 
         color: black;                       
         cursor: pointer;
-        transition: transform 0.4s;        
+        transition: transform 0.4s;
+        margin-right: 10px;        
     }
-    &__link:active
-    {                   
-        transform: translate(-7vh, 0vh);
-        
-            
-        & + .check
-        {
-            
-            transform: translate(-6vh, 0vh);
-            @include screen-only
-            {
-                transform: translate(-7.5vh, 0vh); 
-            }
-
-                               
-            .fa-check-circle
-            {
-                transform: rotate(0deg);
-            }
-        }
-
-            
-    }
-
-       
-
+   
 }
 
     
 
 .check
 {
-       
-    
-    position: absolute;    
-    right: -50px;
-    top: 0;
+  
     border-radius: 0rem 1rem 1rem 0rem;
                
     display: inline-block;

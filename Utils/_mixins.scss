@@ -1,8 +1,29 @@
+@mixin set-margin($margin_top: null, $margin_right: null, $margin_bottom: null, $margin_left: null)
+{
+    @if $margin_top
+    {
+        margin-top: $margin_top;
+    }
+    @if $margin_right
+    {
+        margin-right: $margin_right;
+    }
+    @if $margin_bottom
+    {
+        margin-bottom: $margin_bottom;
+    }
+    @if $margin_left
+    {
+        margin-left: $margin_left;
+    }
+}
+
 @mixin align-block($width: 90%, $text-align: center)
 {
     width: $width;
-    margin-left: auto;
-    margin-right: auto;
+    //margin-left: auto;
+    //margin-right: auto;
+    @include set-margin(auto, auto, auto, auto);
     text-align: $text-align;
 }
 
@@ -100,6 +121,8 @@
 
 
 
+
+
 @mixin head-choices()
 {
     margin-top: 30px;
@@ -119,55 +142,69 @@
 
 @mixin menu-choices()
 {
-    position: relative;
-    
     @include align-block(340px, left);
     @include screen-only
     {
         @include align-block(350px, left);
     }
+    position: relative;
+    z-index: 1;    
     border-radius: 1rem;
     background-color: white;
     border: 1px darken(#EAEAEA, 10) solid;
     box-shadow: 3px 3px 1.5px darken(#EAEAEA, 20);
     padding: 5px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;  
             
     h4
     {
         font-family: serif;
-        margin-bottom: 5px;
-        margin-left: 5px;
-        margin-top: 10px;
-        //font-size: 15pt;
-        width: 350px;
+        @include set-margin(10px, 10px, 5px, 5px);               
+        width: 310px;
                 
     }
     p
     {
         position: relative;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-left: 5px;
-        display: inline-block;
-        //font-size: 10pt;
+        width: 80%;
+        @include set-margin(5px, 10px, 5px, 5px);        
+        display: inline-block;        
         font-family: serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
                                 
     }
-    /*p::after
+   
+    &:active
     {
-        content: "...";
-        
-        border: 3px black solid;
-        position: absolute;        
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        
-        opacity: 0;
-        z-index: -1;
-    }*/
+        p
+        {
+            width: 40%;
+        }
+        .price__link
+        {
+            transform: translate(-7vh, 0vh);
+        }
+        .check
+        {
+            transform: translate(-6vh, 0vh);
+            @include screen-only
+            {
+                transform: translate(-7.5vh, 0vh); 
+            }                              
+            
+        }
+
+        .fa-check-circle
+        {
+            transform: rotate(0deg);
+        }
+    }
        
 }
 

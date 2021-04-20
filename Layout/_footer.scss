@@ -7,25 +7,24 @@ footer
     background-color: rgb(73, 72, 72);
     color: white;
     padding-top: 20px;
-    padding-left: 20px;
+    //padding-left: 20px;
     padding-bottom: 20px;
 
     .footer__logo
     {
         
         
-        width: 300px;
+        width: 200px;
         margin-bottom: 20px;
-        padding-left: 12px;
+        padding-left: 20px;
         @include screen-only
         {
             @include align-block(300px, center);
         }
                 
         
-        //font-size: 1.5rem;
-        font-family: 'My_Shrikhand', serif;
-        //font-weight: bold;        
+        
+        font-family: 'My_Shrikhand', serif;        
         font-style: italic;
         
         @include screen-only
@@ -41,14 +40,14 @@ footer
     {
         list-style-type: none;
         margin-top: 0px;               
-        padding-left: 12px;
+        padding-left: 20px;
         @include screen-only
         {
             height: 100px;
             @include flex(row, space-around, center);
         }
     }
-    
+   
     a
     {
         display: inline-block;

@@ -70,8 +70,10 @@ body {
   src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
 .header {
   width: 99%;
-  margin-left: auto;
+  margin-top: auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
   text-align: center;
   position: relative;
   background-color: white; }
@@ -100,8 +102,10 @@ body {
 
 .map {
   width: 99%;
-  margin-left: auto;
+  margin-top: auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
   text-align: center;
   background-color: #DCDCDC;
   padding-top: 20px;
@@ -109,8 +113,10 @@ body {
   border-top: 2px #ccc7c7 solid; }
   .map__research {
     width: 90%;
-    margin-left: auto;
+    margin-top: auto;
     margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -131,15 +137,19 @@ body {
 
 .view {
   width: 99%;
-  margin-left: auto;
+  margin-top: auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
   text-align: center;
   background-color: #EAEAEA;
   position: relative; }
   .view h2 {
     width: 90%;
-    margin-left: auto;
+    margin-top: auto;
     margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
     text-align: center;
     padding-top: 20px;
     font-family: serif;
@@ -153,8 +163,10 @@ h2 {
 
 .process {
   width: 100%;
-  margin-left: auto;
+  margin-top: auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
   text-align: left;
   margin-top: 40px;
   position: relative; }
@@ -205,8 +217,10 @@ h2 {
 
 .summary-restaurants {
   width: 100%;
-  margin-left: auto;
+  margin-top: auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
   text-align: left;
   background-color: #EAEAEA;
   padding-top: 10px;
@@ -224,8 +238,10 @@ h2 {
 .restaurant {
   border-radius: 15px;
   width: 320px;
-  margin-left: auto;
+  margin-top: auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
   text-align: left;
   background-color: white;
   position: relative;
@@ -328,25 +344,28 @@ h2 {
 footer {
   position: relative;
   width: 99%;
-  margin-left: auto;
+  margin-top: auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
   text-align: left;
   background-color: #494848;
   color: white;
   padding-top: 20px;
-  padding-left: 20px;
   padding-bottom: 20px; }
   footer .footer__logo {
-    width: 300px;
+    width: 200px;
     margin-bottom: 20px;
-    padding-left: 12px;
+    padding-left: 20px;
     font-family: 'My_Shrikhand', serif;
     font-style: italic; }
     @media (min-width: 800px) {
       footer .footer__logo {
         width: 300px;
-        margin-left: auto;
+        margin-top: auto;
         margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
         text-align: center; } }
     @media (min-width: 800px) {
       footer .footer__logo {
@@ -354,7 +373,7 @@ footer {
   footer ul {
     list-style-type: none;
     margin-top: 0px;
-    padding-left: 12px; }
+    padding-left: 20px; }
     @media (min-width: 800px) {
       footer ul {
         height: 100px;
