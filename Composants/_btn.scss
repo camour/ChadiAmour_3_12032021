@@ -24,7 +24,7 @@
         &::after
         {       
             //@include btn-after(2rem, radial-gradient(circle, lighten($primaryColor, 10) 0%, lighten($secondaryColor, 10) 100%));
-            @include btn-after(2rem, radial-gradient(ellipse at 30px 0px, lighten($secondaryColor, 5) 0%, lighten($primaryColor, 5) 100%));
+            @include btn-after(2rem, radial-gradient(ellipse at 30px 0px, lighten($secondaryColor, 10) 0%, lighten($primaryColor, 5) 100%));
         }
     }
    

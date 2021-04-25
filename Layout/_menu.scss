@@ -65,7 +65,7 @@ body
 
 .entries
 {
-    animation: pop_up 3s 0s both;
+    animation: pop_up 5s 0s both;
     position: relative;
     @include head-choices();
     
@@ -82,7 +82,7 @@ body
         }
         &__entry
         {           
-            z-index: 1;     
+              
             @include menu-choices(); 
         }
     }
@@ -91,7 +91,7 @@ body
 
 .plates
 {
-    animation: pop_up 3s 0.5s both;
+    animation: pop_up 5s 2s both;
    
     position: relative;
     @include head-choices();
@@ -114,7 +114,7 @@ body
 
 .desserts
 {
-    animation: pop_up 3s 1s both;    
+    animation: pop_up 5s 4s both;    
     position: relative;
     @include head-choices();
     
@@ -166,7 +166,7 @@ body
         text-decoration: none; 
         color: black;                       
         cursor: pointer;
-        transition: transform 0.4s;
+        transition: transform 2s;
         margin-right: 10px;        
     }
    
@@ -183,7 +183,7 @@ body
                      
     background-color: $tertiaryColor;        
         
-    transition: all 0.4s ease;
+    transition: all 2s ease;
     width: 50px;
     height: 100%;
       
@@ -191,7 +191,7 @@ body
     .fa-check-circle
     {
         transform: rotate(-180deg);
-        transition: transform 0.4s;
+        transition: transform 2s;
         margin: 42%;
         color: white;   
                                    

@@ -18,7 +18,7 @@
   -webkit-text-fill-color: transparent;
   transform: scale(1.5);   
         
-        transition: opacity 1s;
+        transition: opacity 3s;
 
         &:active
         {
@@ -36,7 +36,7 @@
         margin-top: $margin-top;  
         z-index: 1;      
         transform: scale(1.5);
-        transition: opacity 1s;
+        transition: opacity 3s;
 
         &:active
         {
