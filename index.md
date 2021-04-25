@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="./css/style.css" />
         <script src="https://kit.fontawesome.com/3c341fdad4.js" crossorigin="anonymous"></script>
+        <title>Ohmyfood</title>
     </head>
 
     <body>
@@ -23,7 +24,7 @@
         </div> 
 
         <div class="view">
-            <h2>Réservez le menu qui vous convient</h3>
+            <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception,<br/>selectionnés par nos soins</p>
             <button class="btn btn--color">Explorez nos restaurants</button>
         </div>
@@ -33,7 +34,7 @@
             
             <div class="etape"><div class="etape__X"><div class="etape__circle">1</div><i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p></div></div>
             <div class="etape"><div class="etape__X"><div class="etape__circle">2</div><i class="fas fa-list"></i><p>Composez votre menu</p></div></div>
-            <div class="etape"><div class="etape__X"><div class="etape__circle">3</div><i class="fas fa-utensils"></i><p>Dégustez au restaurant</p></div></div>
+            <div class="etape"><div class="etape__X"><div class="etape__circle">3</div><i class="fas fa-store"></i><p>Dégustez au restaurant</p></div></div>
 
         </div>
 
@@ -89,9 +90,9 @@
             <div class="footer__logo">ohmyfood</div>
             <ul>
                 <li><a href="#"><i class="fas fa-utensils"></i><p> Proposer un restaurant </p></a></li>
-                <li><a><i class="fas fa-handshake"></i><p> Devenir partenaire </p></a></li>
-                <li><a><p>Mentions légales</p></a></li>
-                <li><a><p>Contact</p></a></li>
+                <li><a href="#"><i class="fas fa-handshake"></i><p> Devenir partenaire </p></a></li>
+                <li><a href="#"><p>Mentions légales</p></a></li>
+                <li><a href="#"><p>Contact</p></a></li>
             </ul>
         </footer>
                
