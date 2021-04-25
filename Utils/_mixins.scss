@@ -113,7 +113,7 @@
 
 @mixin  ipad-only
 {
-    @media (min-width: 376px) and (max-width: 1200px)
+    @media (min-width: 376px) and (max-width: 1300px)
     {
         @content;
     }
@@ -131,6 +131,14 @@
         @include align-block(90%, left);
         font-family: serif;
         font-weight: lighter;
+        @include ipad-only
+        {
+            margin-left: 40px;
+        }
+        @include screen-only
+        {
+            margin-left: 67px;
+        }
     }
     hr 
     {
@@ -204,7 +212,11 @@
             @include screen-only
             {
                 transform: translate(-7.5vh, 0vh); 
-            }                              
+            }
+            @include ipad-only
+            {
+                transform: translate(-4.5vh, 0vh); 
+            }                           
             
         }
 
