@@ -105,7 +105,7 @@
 
 @mixin screen-only
 {
-    @media (min-width: 800px)
+    @media (min-width: 1200px)
     {
         @content;
     }
@@ -113,7 +113,7 @@
 
 @mixin  ipad-only
 {
-    @media (min-width: 376px) and (max-width: 799px)
+    @media (min-width: 376px) and (max-width: 1200px)
     {
         @content;
     }
@@ -136,7 +136,15 @@
     {
         width: 50px;
         border: 2px solid $tertiaryColor;
-        margin-left: 0px;
+        margin-left: 21px;
+        @include ipad-only
+        {
+            margin-left: 40px;
+        }
+        @include screen-only
+        {
+            margin-left: 67px;
+        }
     }
 } 
 

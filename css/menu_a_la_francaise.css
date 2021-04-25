@@ -99,14 +99,16 @@ footer {
   background-color: #494848;
   color: white;
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  font-weight: lighter;
+  font-family: serif; }
   footer .footer__logo {
     width: 200px;
     margin-bottom: 20px;
     padding-left: 20px;
     font-family: 'My_Shrikhand', serif;
     font-style: italic; }
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       footer .footer__logo {
         width: 300px;
         margin-top: auto;
@@ -114,14 +116,14 @@ footer {
         margin-bottom: auto;
         margin-left: auto;
         text-align: center; } }
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       footer .footer__logo {
         margin: auto; } }
   footer ul {
     list-style-type: none;
     margin-top: 0px;
     padding-left: 20px; }
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       footer ul {
         height: 100px;
         display: flex;
@@ -139,7 +141,8 @@ footer {
     color: white;
     text-decoration: none; }
   footer i {
-    margin-right: 6px; }
+    margin-right: 6px;
+    width: 20px; }
   footer p {
     margin-top: 8px;
     margin-bottom: 8px; }
@@ -184,7 +187,7 @@ body {
     .menu__title h2 {
       font-family: "My_Shrikhand";
       font-style: italic; }
-      @media (min-width: 800px) {
+      @media (min-width: 1200px) {
         .menu__title h2 {
           width: 300px;
           margin-left: auto;
@@ -236,7 +239,13 @@ body {
   .entries hr {
     width: 50px;
     border: 2px solid #99E2D0;
-    margin-left: 0px; }
+    margin-left: 21px; }
+    @media (min-width: 376px) and (max-width: 1200px) {
+      .entries hr {
+        margin-left: 40px; } }
+    @media (min-width: 1200px) {
+      .entries hr {
+        margin-left: 67px; } }
   .entries-list {
     position: relative;
     display: flex;
@@ -244,7 +253,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; }
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       .entries-list {
         display: flex;
         flex-direction: row;
@@ -271,7 +280,7 @@ body {
       text-overflow: ellipsis;
       white-space: nowrap;
       cursor: pointer; }
-      @media (min-width: 800px) {
+      @media (min-width: 1200px) {
         .entries-list__entry {
           width: 350px;
           margin-top: auto;
@@ -303,7 +312,7 @@ body {
         transform: translate(-7vh, 0vh); }
       .entries-list__entry:active .check {
         transform: translate(-6vh, 0vh); }
-        @media (min-width: 800px) {
+        @media (min-width: 1200px) {
           .entries-list__entry:active .check {
             transform: translate(-7.5vh, 0vh); } }
       .entries-list__entry:active .fa-check-circle {
@@ -325,7 +334,13 @@ body {
   .plates hr {
     width: 50px;
     border: 2px solid #99E2D0;
-    margin-left: 0px; }
+    margin-left: 21px; }
+    @media (min-width: 376px) and (max-width: 1200px) {
+      .plates hr {
+        margin-left: 40px; } }
+    @media (min-width: 1200px) {
+      .plates hr {
+        margin-left: 67px; } }
   .plates-list {
     position: relative;
     display: flex;
@@ -333,7 +348,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; }
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       .plates-list {
         display: flex;
         flex-direction: row;
@@ -360,7 +375,7 @@ body {
       text-overflow: ellipsis;
       white-space: nowrap;
       cursor: pointer; }
-      @media (min-width: 800px) {
+      @media (min-width: 1200px) {
         .plates-list__plate {
           width: 350px;
           margin-top: auto;
@@ -392,7 +407,7 @@ body {
         transform: translate(-7vh, 0vh); }
       .plates-list__plate:active .check {
         transform: translate(-6vh, 0vh); }
-        @media (min-width: 800px) {
+        @media (min-width: 1200px) {
           .plates-list__plate:active .check {
             transform: translate(-7.5vh, 0vh); } }
       .plates-list__plate:active .fa-check-circle {
@@ -414,7 +429,13 @@ body {
   .desserts hr {
     width: 50px;
     border: 2px solid #99E2D0;
-    margin-left: 0px; }
+    margin-left: 21px; }
+    @media (min-width: 376px) and (max-width: 1200px) {
+      .desserts hr {
+        margin-left: 40px; } }
+    @media (min-width: 1200px) {
+      .desserts hr {
+        margin-left: 67px; } }
   .desserts-list {
     position: relative;
     display: flex;
@@ -422,7 +443,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; }
-    @media (min-width: 800px) {
+    @media (min-width: 1200px) {
       .desserts-list {
         display: flex;
         flex-direction: row;
@@ -448,7 +469,7 @@ body {
       text-overflow: ellipsis;
       white-space: nowrap;
       cursor: pointer; }
-      @media (min-width: 800px) {
+      @media (min-width: 1200px) {
         .desserts-list__dessert {
           width: 350px;
           margin-top: auto;
@@ -480,7 +501,7 @@ body {
         transform: translate(-7vh, 0vh); }
       .desserts-list__dessert:active .check {
         transform: translate(-6vh, 0vh); }
-        @media (min-width: 800px) {
+        @media (min-width: 1200px) {
           .desserts-list__dessert:active .check {
             transform: translate(-7.5vh, 0vh); } }
       .desserts-list__dessert:active .fa-check-circle {

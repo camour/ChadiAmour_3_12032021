@@ -189,7 +189,10 @@ h2
     @include align-block(320px, left);    
     background-color: white;
     position: relative;
-    margin: 30px;
+    @include screen-only
+    {
+        margin: 30px;
+    }
     margin-bottom: 22px;
     
     
