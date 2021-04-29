@@ -10,16 +10,15 @@
 
 
 body
-{
-    //@include align-block(99%, left);
+{    
     font-family: "My_Roboto";
     width: 100%;
     margin: auto;
-    background-color: #EAEAEA;
+    background-color: $backgroundColor;
 }
 .header
 {
-    @include flex(row, space-between, center);
+    //@include flex(row, space-between, center);
 }
 
 
@@ -30,117 +29,107 @@ body
     position: relative;
     top: -20px;
    
-    background-color: #EAEAEA;
-    border-radius: 1.5rem 1.5rem 0rem 0rem;
-    
-    
-    &__title
-    {
-        position: relative;
-        @include align-block(90%, left);
-        
-        
-        @include flex(row, flex-start, center);
-        h2
-        {
-            font-family: "My_Shrikhand";
-            font-style: italic;
-            @include screen-only
-            {
-                //position: relative;
-                //left: 50%;
-                width: 300px;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-        }
-            
-        @include heart-btn(0px);
-        
-    }
+    background-color: $backgroundColor;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;       
+}
 
-    
+.menu__title
+{
+    position: relative;
+    @include align-block(90%, left);
+                
+    @include flex(row, flex-start, center);
+    h2
+    {
+        font-family: "My_Shrikhand";
+        font-style: italic;
+        @include screen-only
+        {                
+            @include align-block(300px, center);
+        }
+    }
+            
+    @include heart-btn(0px);
+        
 }
 
 .entries
 {
-    animation: pop_up 5s 0s both;
+    animation: pop_up 4s 0s both;
     position: relative;
     @include head-choices();
-    
-    
-    &-list
-    {
-        
-        position: relative;
-        @include flex(column, space-between, center);
-        
-        @include screen-only
-        {
-            @include flex(row, space-between, center);
-        }
-        &__entry
-        {           
-              
-            @include menu-choices(); 
-        }
-    }
-
 }
+    
+    
+.entries-list
+{
+        
+    position: relative;
+    @include flex(column, space-between, center);
+        
+    @include screen-only
+    {
+        @include flex(row, space-between, center);
+    }
+    &__entry
+    {     
+        @include menu-choices(); 
+    }
+}
+
+
 
 .plates
 {
-    animation: pop_up 5s 2s both;
-   
+    animation: pop_up 4s 2s both;   
     position: relative;
     @include head-choices();
-
-    &-list
-    {
-        position: relative;
-        @include flex(column, space-between, center);
-        @include screen-only
-        {
-            @include flex(row, space-between, center);
-        }
-        &__plate
-        {   z-index: 1;         
-            @include menu-choices();
-        }
-    }
-
 }
+
+.plates-list
+{
+    position: relative;
+    @include flex(column, space-between, center);
+    @include screen-only
+    {
+        @include flex(row, space-between, center);
+    }
+    &__plate
+    {            
+        @include menu-choices();
+    }
+}
+
+
 
 .desserts
 {
-    animation: pop_up 5s 4s both;    
+    animation: pop_up 4s 4s both;    
     position: relative;
     @include head-choices();
-    
-    &-list
-    {
-        position: relative;
-        @include flex(column, space-between, center);
-        @include screen-only
-        {
-            @include flex(row, space-between, center);
-        }
-        &__dessert
-        {
-            
-            @include menu-choices();
-        }
-    }
-
 }
+    
+.desserts-list
+{
+    position: relative;
+    @include flex(column, space-between, center);
+    @include screen-only
+    {
+        @include flex(row, space-between, center);
+    }
+    &__dessert
+    {            
+        @include menu-choices();
+    }
+}
+
+
 
 .bloc-btn
 {
     @include align-block(100%);
-    background-color: #EAEAEA;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    background-color: $backgroundColor;    
+    @include set-margin(20px, 'none', 40px, 'none');
     
 }
 

@@ -70,13 +70,16 @@ body {
   src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
 .header {
   width: 99%;
-  margin-top: auto;
   margin-right: auto;
-  margin-bottom: auto;
   margin-left: auto;
   text-align: center;
   position: relative;
-  background-color: white; }
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
   .header__logo {
     width: 300px;
     height: 100px;
@@ -85,7 +88,10 @@ body {
     background-size: auto;
     background-position: center;
     border-radius: 10px 10px 0px 0px;
-    margin: auto; }
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto; }
 
 .loader {
   position: fixed;
@@ -102,9 +108,7 @@ body {
 
 .map {
   width: 99%;
-  margin-top: auto;
   margin-right: auto;
-  margin-bottom: auto;
   margin-left: auto;
   text-align: center;
   background-color: #DCDCDC;
@@ -113,9 +117,7 @@ body {
   border-top: 2px #ccc7c7 solid; }
   .map__research {
     width: 90%;
-    margin-top: auto;
     margin-right: auto;
-    margin-bottom: auto;
     margin-left: auto;
     text-align: center;
     display: flex;
@@ -137,18 +139,14 @@ body {
 
 .view {
   width: 99%;
-  margin-top: auto;
   margin-right: auto;
-  margin-bottom: auto;
   margin-left: auto;
   text-align: center;
   background-color: #EAEAEA;
   position: relative; }
   .view h2 {
     width: 90%;
-    margin-top: auto;
     margin-right: auto;
-    margin-bottom: auto;
     margin-left: auto;
     text-align: center;
     padding-top: 20px;
@@ -163,9 +161,7 @@ h2 {
 
 .process {
   width: 100%;
-  margin-top: auto;
   margin-right: auto;
-  margin-bottom: auto;
   margin-left: auto;
   text-align: left;
   margin-top: 40px;
@@ -181,14 +177,14 @@ h2 {
 .etape {
   border-radius: 15px;
   padding: 10px;
-  margin-bottom: 20px;
   background-color: #F7F7F7;
   box-shadow: 5px 5px 5px #EAEAEA;
   position: relative;
   width: 300px;
-  margin: auto;
   margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto; }
   .etape p {
     display: inline-block;
     vertical-align: middle;
@@ -217,9 +213,7 @@ h2 {
 
 .summary-restaurants {
   width: 100%;
-  margin-top: auto;
   margin-right: auto;
-  margin-bottom: auto;
   margin-left: auto;
   text-align: left;
   background-color: #EAEAEA;
@@ -238,9 +232,7 @@ h2 {
 .restaurant {
   border-radius: 15px;
   width: 320px;
-  margin-top: auto;
   margin-right: auto;
-  margin-bottom: auto;
   margin-left: auto;
   text-align: left;
   background-color: white;
@@ -346,9 +338,7 @@ h2 {
 footer {
   position: relative;
   width: 99%;
-  margin-top: auto;
   margin-right: auto;
-  margin-bottom: auto;
   margin-left: auto;
   text-align: left;
   background-color: #494848;
@@ -366,9 +356,7 @@ footer {
     @media (min-width: 1200px) {
       footer .footer__logo {
         width: 300px;
-        margin-top: auto;
         margin-right: auto;
-        margin-bottom: auto;
         margin-left: auto;
         text-align: center; } }
     @media (min-width: 1200px) {

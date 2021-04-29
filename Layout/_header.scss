@@ -5,14 +5,12 @@
     @include align-block(99%);
     position: relative;
     background-color: white;
-    
+    @include flex(row, space-between, center);
     
     &__logo
-    {
-        //@include align-block(100%);        
+    {                
         @include create-image("../Maquettes_Ohmyfood/images/logo/ohmyfood.png", auto, 300px, 100px);
-        margin: auto;
-        
+        @include set-margin(auto, auto, auto, auto);       
           
     }
 }
