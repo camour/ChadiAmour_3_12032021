@@ -1,3 +1,5 @@
+Site Web de gastronomie
+
 Ce site Web a pour but de réserver des restaurants en ligne depuis votre smartphone
 site validé au validateur W3C  (HTML et CSS)
 
