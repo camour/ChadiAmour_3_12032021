@@ -5,6 +5,8 @@
 @import "./Composants/btn";
 @import "./Composants/heart_btn";
 @import "./Utils/keyframes";
+@import "./Layout/header";
+@import "./Layout/footer";
 
 
 body
@@ -14,7 +16,7 @@ body
     margin: auto;
 }
 
-@import "./Layout/header";
+
 
 
 
@@ -188,6 +190,7 @@ h2
     
     @include restaurant__new();          
      
+    // automatiser la creation des images de restaurants sur la page d'accueil
     @each $key, $value in $images
     {
         #{$key}
@@ -216,4 +219,4 @@ h2
     
 }
 
-@import "./Layout/footer";
+

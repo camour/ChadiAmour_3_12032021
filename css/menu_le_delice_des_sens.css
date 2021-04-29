@@ -216,9 +216,9 @@ body {
       opacity: 0; }
 
 .entries {
-  animation: pop_up 4s 0s both;
   position: relative;
-  margin-top: 30px; }
+  margin-top: 30px;
+  animation: pop_up 4s 0s both; }
   .entries h3 {
     width: 90%;
     margin-right: auto;
@@ -242,6 +242,64 @@ body {
         margin-left: 40px; } }
     @media (min-width: 1200px) {
       .entries hr {
+        margin-left: 67px; } }
+
+.plates {
+  position: relative;
+  margin-top: 30px;
+  animation: pop_up 4s 2s both; }
+  .plates h3 {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    margin-bottom: auto;
+    font-family: serif;
+    font-weight: lighter; }
+    @media (min-width: 376px) and (max-width: 1300px) {
+      .plates h3 {
+        margin-left: 40px; } }
+    @media (min-width: 1200px) {
+      .plates h3 {
+        margin-left: 67px; } }
+  .plates hr {
+    width: 50px;
+    border: 2px solid #99E2D0;
+    margin-left: 21px; }
+    @media (min-width: 376px) and (max-width: 1300px) {
+      .plates hr {
+        margin-left: 40px; } }
+    @media (min-width: 1200px) {
+      .plates hr {
+        margin-left: 67px; } }
+
+.desserts {
+  position: relative;
+  margin-top: 30px;
+  animation: pop_up 4s 4s both; }
+  .desserts h3 {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    margin-bottom: auto;
+    font-family: serif;
+    font-weight: lighter; }
+    @media (min-width: 376px) and (max-width: 1300px) {
+      .desserts h3 {
+        margin-left: 40px; } }
+    @media (min-width: 1200px) {
+      .desserts h3 {
+        margin-left: 67px; } }
+  .desserts hr {
+    width: 50px;
+    border: 2px solid #99E2D0;
+    margin-left: 21px; }
+    @media (min-width: 376px) and (max-width: 1300px) {
+      .desserts hr {
+        margin-left: 40px; } }
+    @media (min-width: 1200px) {
+      .desserts hr {
         margin-left: 67px; } }
 
 .entries-list {
@@ -314,35 +372,6 @@ body {
     .entries-list__entry:active .fa-check-circle {
       transform: rotate(0deg); }
 
-.plates {
-  animation: pop_up 4s 2s both;
-  position: relative;
-  margin-top: 30px; }
-  .plates h3 {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: left;
-    margin-bottom: auto;
-    font-family: serif;
-    font-weight: lighter; }
-    @media (min-width: 376px) and (max-width: 1300px) {
-      .plates h3 {
-        margin-left: 40px; } }
-    @media (min-width: 1200px) {
-      .plates h3 {
-        margin-left: 67px; } }
-  .plates hr {
-    width: 50px;
-    border: 2px solid #99E2D0;
-    margin-left: 21px; }
-    @media (min-width: 376px) and (max-width: 1300px) {
-      .plates hr {
-        margin-left: 40px; } }
-    @media (min-width: 1200px) {
-      .plates hr {
-        margin-left: 67px; } }
-
 .plates-list {
   position: relative;
   display: flex;
@@ -412,35 +441,6 @@ body {
           transform: translate(-4.5vh, 0vh); } }
     .plates-list__plate:active .fa-check-circle {
       transform: rotate(0deg); }
-
-.desserts {
-  animation: pop_up 4s 4s both;
-  position: relative;
-  margin-top: 30px; }
-  .desserts h3 {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: left;
-    margin-bottom: auto;
-    font-family: serif;
-    font-weight: lighter; }
-    @media (min-width: 376px) and (max-width: 1300px) {
-      .desserts h3 {
-        margin-left: 40px; } }
-    @media (min-width: 1200px) {
-      .desserts h3 {
-        margin-left: 67px; } }
-  .desserts hr {
-    width: 50px;
-    border: 2px solid #99E2D0;
-    margin-left: 21px; }
-    @media (min-width: 376px) and (max-width: 1300px) {
-      .desserts hr {
-        margin-left: 40px; } }
-    @media (min-width: 1200px) {
-      .desserts hr {
-        margin-left: 67px; } }
 
 .desserts-list {
   position: relative;

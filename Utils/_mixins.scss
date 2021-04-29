@@ -42,6 +42,7 @@
     text-align: $text-align;
 }
 
+// cree une image de restaurant sur la page d'accueil
 @mixin create-image($urlImage, $background_size, $width, $height)
 {
     width: $width;
@@ -57,7 +58,7 @@
     background-color: $color;
 }
 
-
+// pour jouer sur l'opacity d'un bouton
 @mixin btn-after($border_radius, $background_color)
 {
     content: "";
@@ -75,6 +76,7 @@
     background: $background_color;   
 }
 
+// ajouter le logo "nouveau" sur la vignette du restaurant
 @mixin restaurant__new()
 {
     &__new
@@ -119,9 +121,7 @@
 }
 
 
-
-
-
+// page de menus : en-tete pour "entrees", "plats" et "desserts"
 @mixin head-choices()
 {
     margin-top: 30px;
@@ -156,6 +156,7 @@
     }
 } 
 
+// page de menus : contenu des entrees, plats et desserts
 @mixin menu-choices()
 {
     @include align-block(340px, left);
@@ -226,6 +227,37 @@
         }
     }
        
+}
+
+@mixin menu-animation($animation_name, $animation_duration, $animation_delay, $fill_mode)
+{   
+    animation: $animation_name $animation_duration $animation_delay $fill_mode;
+}
+
+@mixin create_menus_blocs($types_list)
+{
+    $animation_delay: 1s;
+    @each $key in $types_list
+    {
+        @if($key == ".entries")
+        {
+            $animation_delay: 0s;
+        }
+        @else if($key == ".plates")
+        {
+            $animation_delay: 2s;
+        }
+        @else if ($key == ".desserts")
+        {
+            $animation_delay: 4s;
+        }
+        #{$key}
+        {
+            position: relative;
+            @include head-choices();
+            @include menu-animation(pop_up, 4s, $animation_delay, both);
+        }
+    }
 }
 
 

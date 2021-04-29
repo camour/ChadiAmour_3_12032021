@@ -57,11 +57,6 @@
     transform: scale(0); }
   to {
     transform: scale(1); } }
-body {
-  font-family: 'My_Roboto', serif;
-  width: 100%;
-  margin: auto; }
-
 @font-face {
   font-family: "My_Roboto";
   src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
@@ -92,6 +87,72 @@ body {
     margin-right: auto;
     margin-bottom: auto;
     margin-left: auto; }
+
+@font-face {
+  font-family: "My_Roboto";
+  src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
+@font-face {
+  font-family: "My_Shrikhand";
+  src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
+footer {
+  position: relative;
+  width: 99%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  background-color: #494848;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: lighter;
+  font-family: serif; }
+  footer .footer__logo {
+    width: 200px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-family: 'My_Shrikhand', serif;
+    font-style: italic; }
+    @media (min-width: 1200px) {
+      footer .footer__logo {
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center; } }
+    @media (min-width: 1200px) {
+      footer .footer__logo {
+        margin: auto; } }
+  footer ul {
+    list-style-type: none;
+    margin-top: 0px;
+    padding-left: 20px; }
+    @media (min-width: 1200px) {
+      footer ul {
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap; } }
+  footer a {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    text-decoration: none; }
+  footer i {
+    margin-right: 6px;
+    width: 20px; }
+  footer p {
+    margin-top: 8px;
+    margin-bottom: 8px; }
+
+body {
+  font-family: 'My_Roboto', serif;
+  width: 100%;
+  margin: auto; }
 
 .loader {
   position: fixed;
@@ -328,66 +389,5 @@ h2 {
   .restaurant p {
     font-family: serif;
     margin-top: 4px; }
-
-@font-face {
-  font-family: "My_Roboto";
-  src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
-@font-face {
-  font-family: "My_Shrikhand";
-  src: url("../Polices/Shrikhand-Regular.otf") format("otf"), url("../Polices/shrikhand-regular.woff2") format("woff2"), url("../Polices/shrikhand-regular.woff") format("woff"); }
-footer {
-  position: relative;
-  width: 99%;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
-  background-color: #494848;
-  color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-weight: lighter;
-  font-family: serif; }
-  footer .footer__logo {
-    width: 200px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    font-family: 'My_Shrikhand', serif;
-    font-style: italic; }
-    @media (min-width: 1200px) {
-      footer .footer__logo {
-        width: 300px;
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center; } }
-    @media (min-width: 1200px) {
-      footer .footer__logo {
-        margin: auto; } }
-  footer ul {
-    list-style-type: none;
-    margin-top: 0px;
-    padding-left: 20px; }
-    @media (min-width: 1200px) {
-      footer ul {
-        height: 100px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap; } }
-  footer a {
-    display: inline-block;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    color: white;
-    text-decoration: none; }
-  footer i {
-    margin-right: 6px;
-    width: 20px; }
-  footer p {
-    margin-top: 8px;
-    margin-bottom: 8px; }
 
 /*# sourceMappingURL=style.css.map */
