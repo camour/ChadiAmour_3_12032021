@@ -92,7 +92,7 @@
                 <li><a href="#"><i class="fas fa-utensils"></i><p> Proposer un restaurant </p></a></li>
                 <li><a href="#"><i class="fas fa-handshake"></i><p> Devenir partenaire </p></a></li>
                 <li><a href="#"><p>Mentions légales</p></a></li>
-                <li><a href="mailto:chadi.amour@gmail.com"><p>Contact</p></a></li>
+                <li><a href="mailto:support@gmail.com"><p>Contact</p></a></li>
             </ul>
         </footer>
                
