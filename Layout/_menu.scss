@@ -34,10 +34,11 @@ body
     @include align-block(90%, left);
                 
     @include flex(row, flex-start, center);
-    h2
+    h1
     {
-        font-family: "My_Shrikhand";
+        font-family: "My_Shrikhand", serif;
         font-style: italic;
+        font-size: 1.7em;
         @include screen-only
         {                
             @include align-block(300px, center);
@@ -123,12 +124,12 @@ body
     {
         display: inline-block;            
         position: relative;
-        top: 23px;        
+        top: 15px;        
         width: 30px;
         text-decoration: none; 
         color: black;                       
         cursor: pointer;
-        transition: transform 2s;
+        transition: transform 0.5s;
         margin-right: 10px;        
     }
    
@@ -145,16 +146,16 @@ body
                      
     background-color: $tertiaryColor;        
         
-    transition: all 2s ease;
+    transition: all 0.5s;
     width: 50px;
     height: 100%;
       
                 
     .fa-check-circle
     {
-        transform: rotate(-180deg);
-        transition: transform 2s;
-        margin: 42%;
+        transform: rotate(-360deg);
+        transition: transform 0.8s;    
+        @include set-margin(56%, 60%, 60%, 38%);
         color: white;   
                                    
     }

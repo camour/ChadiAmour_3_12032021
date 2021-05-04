@@ -85,9 +85,11 @@
     transform: scale(1); } }
 @keyframes pop_up {
   from {
-    transform: scale(0); }
+    transform: translateY(20px);
+    opacity: 0; }
   to {
-    transform: scale(1); } }
+    transform: translateY(0px);
+    opacity: 1; } }
 @font-face {
   font-family: "My_Roboto";
   src: url("../Polices/Roboto-Black.ttf") format("TrueType"); }
@@ -176,16 +178,18 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap; }
-  .menu__title h2 {
-    font-family: "My_Shrikhand";
-    font-style: italic; }
+  .menu__title h1 {
+    font-family: "My_Shrikhand", serif;
+    font-style: italic;
+    font-size: 1.7em; }
     @media (min-width: 1200px) {
-      .menu__title h2 {
+      .menu__title h1 {
         width: 300px;
         margin-right: auto;
         margin-left: auto;
         text-align: center; } }
   .menu__title .fas.fa-heart {
+    cursor: pointer;
     position: absolute;
     right: 30px;
     vertical-align: top;
@@ -198,11 +202,16 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(1.5);
-    transition: opacity 3s; }
-    .menu__title .fas.fa-heart:active {
-      cursor: pointer;
-      opacity: 1; }
+    transition: opacity 1.5s; }
+    @media (max-width: 375px) {
+      .menu__title .fas.fa-heart:active {
+        opacity: 1; } }
+    @media (min-width: 1200px) {
+      .menu__title .fas.fa-heart:hover {
+        cursor: pointer;
+        opacity: 1; } }
   .menu__title .far.fa-heart {
+    cursor: pointer;
     position: absolute;
     right: 30px;
     vertical-align: top;
@@ -211,27 +220,32 @@ body {
     margin-top: 0px;
     z-index: 1;
     transform: scale(1.5);
-    transition: opacity 3s; }
-    .menu__title .far.fa-heart:active {
-      opacity: 0; }
+    transition: opacity 1.5s; }
+    @media (max-width: 375px) {
+      .menu__title .far.fa-heart:active {
+        opacity: 0; } }
+    @media (min-width: 1200px) {
+      .menu__title .far.fa-heart:hover {
+        opacity: 0; } }
 
 .entries {
   position: relative;
   margin-top: 30px;
-  animation: pop_up 4s 0s both; }
-  .entries h3 {
+  animation: pop_up 2.4s 0s both; }
+  .entries h2 {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
     text-align: left;
     margin-bottom: auto;
     font-family: serif;
-    font-weight: lighter; }
+    font-weight: lighter;
+    font-size: 1.1em; }
     @media (min-width: 376px) and (max-width: 1300px) {
-      .entries h3 {
+      .entries h2 {
         margin-left: 40px; } }
     @media (min-width: 1200px) {
-      .entries h3 {
+      .entries h2 {
         margin-left: 67px; } }
   .entries hr {
     width: 50px;
@@ -247,20 +261,21 @@ body {
 .plates {
   position: relative;
   margin-top: 30px;
-  animation: pop_up 4s 2s both; }
-  .plates h3 {
+  animation: pop_up 2.4s 1.5s both; }
+  .plates h2 {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
     text-align: left;
     margin-bottom: auto;
     font-family: serif;
-    font-weight: lighter; }
+    font-weight: lighter;
+    font-size: 1.1em; }
     @media (min-width: 376px) and (max-width: 1300px) {
-      .plates h3 {
+      .plates h2 {
         margin-left: 40px; } }
     @media (min-width: 1200px) {
-      .plates h3 {
+      .plates h2 {
         margin-left: 67px; } }
   .plates hr {
     width: 50px;
@@ -276,20 +291,21 @@ body {
 .desserts {
   position: relative;
   margin-top: 30px;
-  animation: pop_up 4s 4s both; }
-  .desserts h3 {
+  animation: pop_up 2.4s 3s both; }
+  .desserts h2 {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
     text-align: left;
     margin-bottom: auto;
     font-family: serif;
-    font-weight: lighter; }
+    font-weight: lighter;
+    font-size: 1.1em; }
     @media (min-width: 376px) and (max-width: 1300px) {
-      .desserts h3 {
+      .desserts h2 {
         margin-left: 40px; } }
     @media (min-width: 1200px) {
-      .desserts h3 {
+      .desserts h2 {
         margin-left: 67px; } }
   .desserts hr {
     width: 50px;
@@ -339,13 +355,14 @@ body {
         margin-right: auto;
         margin-left: auto;
         text-align: left; } }
-    .entries-list__entry h4 {
+    .entries-list__entry h3 {
       font-family: serif;
       margin-top: 10px;
       margin-right: 10px;
       margin-bottom: 5px;
       margin-left: 5px;
-      width: 310px; }
+      width: 310px;
+      font-size: 1em; }
     .entries-list__entry p {
       position: relative;
       width: 80%;
@@ -357,20 +374,38 @@ body {
       font-family: serif;
       overflow: hidden;
       text-overflow: ellipsis; }
-    .entries-list__entry:active p {
-      width: 40%; }
-    .entries-list__entry:active .price__link {
-      transform: translate(-7vh, 0vh); }
+    @media (max-width: 375px) {
+      .entries-list__entry:active p {
+        width: 40%; }
+      .entries-list__entry:active .price__link {
+        transform: translate(-7vh, 0vh); }
+      .entries-list__entry:active .check {
+        transform: translate(-6vh, 0vh); } }
+  @media (max-width: 375px) and (min-width: 1200px) {
     .entries-list__entry:active .check {
-      transform: translate(-6vh, 0vh); }
-      @media (min-width: 1200px) {
-        .entries-list__entry:active .check {
-          transform: translate(-7.5vh, 0vh); } }
-      @media (min-width: 376px) and (max-width: 1300px) {
-        .entries-list__entry:active .check {
-          transform: translate(-4.5vh, 0vh); } }
-    .entries-list__entry:active .fa-check-circle {
-      transform: rotate(0deg); }
+      transform: translate(-7.5vh, 0vh); } }
+  @media (max-width: 375px) and (min-width: 376px) and (max-width: 1300px) {
+    .entries-list__entry:active .check {
+      transform: translate(-4.5vh, 0vh); } }
+    @media (max-width: 375px) {
+      .entries-list__entry:active .fa-check-circle {
+        transform: rotate(360deg); } }
+    @media (min-width: 1200px) {
+      .entries-list__entry:hover p {
+        width: 40%; }
+      .entries-list__entry:hover .price__link {
+        transform: translate(-7vh, 0vh); }
+      .entries-list__entry:hover .check {
+        transform: translate(-6vh, 0vh); } }
+  @media (min-width: 1200px) and (min-width: 1200px) {
+    .entries-list__entry:hover .check {
+      transform: translate(-7.5vh, 0vh); } }
+  @media (min-width: 1200px) and (min-width: 376px) and (max-width: 1300px) {
+    .entries-list__entry:hover .check {
+      transform: translate(-4.5vh, 0vh); } }
+    @media (min-width: 1200px) {
+      .entries-list__entry:hover .fa-check-circle {
+        transform: rotate(360deg); } }
 
 .plates-list {
   position: relative;
@@ -409,13 +444,14 @@ body {
         margin-right: auto;
         margin-left: auto;
         text-align: left; } }
-    .plates-list__plate h4 {
+    .plates-list__plate h3 {
       font-family: serif;
       margin-top: 10px;
       margin-right: 10px;
       margin-bottom: 5px;
       margin-left: 5px;
-      width: 310px; }
+      width: 310px;
+      font-size: 1em; }
     .plates-list__plate p {
       position: relative;
       width: 80%;
@@ -427,20 +463,38 @@ body {
       font-family: serif;
       overflow: hidden;
       text-overflow: ellipsis; }
-    .plates-list__plate:active p {
-      width: 40%; }
-    .plates-list__plate:active .price__link {
-      transform: translate(-7vh, 0vh); }
+    @media (max-width: 375px) {
+      .plates-list__plate:active p {
+        width: 40%; }
+      .plates-list__plate:active .price__link {
+        transform: translate(-7vh, 0vh); }
+      .plates-list__plate:active .check {
+        transform: translate(-6vh, 0vh); } }
+  @media (max-width: 375px) and (min-width: 1200px) {
     .plates-list__plate:active .check {
-      transform: translate(-6vh, 0vh); }
-      @media (min-width: 1200px) {
-        .plates-list__plate:active .check {
-          transform: translate(-7.5vh, 0vh); } }
-      @media (min-width: 376px) and (max-width: 1300px) {
-        .plates-list__plate:active .check {
-          transform: translate(-4.5vh, 0vh); } }
-    .plates-list__plate:active .fa-check-circle {
-      transform: rotate(0deg); }
+      transform: translate(-7.5vh, 0vh); } }
+  @media (max-width: 375px) and (min-width: 376px) and (max-width: 1300px) {
+    .plates-list__plate:active .check {
+      transform: translate(-4.5vh, 0vh); } }
+    @media (max-width: 375px) {
+      .plates-list__plate:active .fa-check-circle {
+        transform: rotate(360deg); } }
+    @media (min-width: 1200px) {
+      .plates-list__plate:hover p {
+        width: 40%; }
+      .plates-list__plate:hover .price__link {
+        transform: translate(-7vh, 0vh); }
+      .plates-list__plate:hover .check {
+        transform: translate(-6vh, 0vh); } }
+  @media (min-width: 1200px) and (min-width: 1200px) {
+    .plates-list__plate:hover .check {
+      transform: translate(-7.5vh, 0vh); } }
+  @media (min-width: 1200px) and (min-width: 376px) and (max-width: 1300px) {
+    .plates-list__plate:hover .check {
+      transform: translate(-4.5vh, 0vh); } }
+    @media (min-width: 1200px) {
+      .plates-list__plate:hover .fa-check-circle {
+        transform: rotate(360deg); } }
 
 .desserts-list {
   position: relative;
@@ -479,13 +533,14 @@ body {
         margin-right: auto;
         margin-left: auto;
         text-align: left; } }
-    .desserts-list__dessert h4 {
+    .desserts-list__dessert h3 {
       font-family: serif;
       margin-top: 10px;
       margin-right: 10px;
       margin-bottom: 5px;
       margin-left: 5px;
-      width: 310px; }
+      width: 310px;
+      font-size: 1em; }
     .desserts-list__dessert p {
       position: relative;
       width: 80%;
@@ -497,20 +552,38 @@ body {
       font-family: serif;
       overflow: hidden;
       text-overflow: ellipsis; }
-    .desserts-list__dessert:active p {
-      width: 40%; }
-    .desserts-list__dessert:active .price__link {
-      transform: translate(-7vh, 0vh); }
+    @media (max-width: 375px) {
+      .desserts-list__dessert:active p {
+        width: 40%; }
+      .desserts-list__dessert:active .price__link {
+        transform: translate(-7vh, 0vh); }
+      .desserts-list__dessert:active .check {
+        transform: translate(-6vh, 0vh); } }
+  @media (max-width: 375px) and (min-width: 1200px) {
     .desserts-list__dessert:active .check {
-      transform: translate(-6vh, 0vh); }
-      @media (min-width: 1200px) {
-        .desserts-list__dessert:active .check {
-          transform: translate(-7.5vh, 0vh); } }
-      @media (min-width: 376px) and (max-width: 1300px) {
-        .desserts-list__dessert:active .check {
-          transform: translate(-4.5vh, 0vh); } }
-    .desserts-list__dessert:active .fa-check-circle {
-      transform: rotate(0deg); }
+      transform: translate(-7.5vh, 0vh); } }
+  @media (max-width: 375px) and (min-width: 376px) and (max-width: 1300px) {
+    .desserts-list__dessert:active .check {
+      transform: translate(-4.5vh, 0vh); } }
+    @media (max-width: 375px) {
+      .desserts-list__dessert:active .fa-check-circle {
+        transform: rotate(360deg); } }
+    @media (min-width: 1200px) {
+      .desserts-list__dessert:hover p {
+        width: 40%; }
+      .desserts-list__dessert:hover .price__link {
+        transform: translate(-7vh, 0vh); }
+      .desserts-list__dessert:hover .check {
+        transform: translate(-6vh, 0vh); } }
+  @media (min-width: 1200px) and (min-width: 1200px) {
+    .desserts-list__dessert:hover .check {
+      transform: translate(-7.5vh, 0vh); } }
+  @media (min-width: 1200px) and (min-width: 376px) and (max-width: 1300px) {
+    .desserts-list__dessert:hover .check {
+      transform: translate(-4.5vh, 0vh); } }
+    @media (min-width: 1200px) {
+      .desserts-list__dessert:hover .fa-check-circle {
+        transform: rotate(360deg); } }
 
 .bloc-btn {
   width: 100%;
@@ -531,25 +604,28 @@ body {
   .price__link {
     display: inline-block;
     position: relative;
-    top: 23px;
+    top: 15px;
     width: 30px;
     text-decoration: none;
     color: black;
     cursor: pointer;
-    transition: transform 2s;
+    transition: transform 0.5s;
     margin-right: 10px; }
 
 .check {
   border-radius: 0rem 1rem 1rem 0rem;
   display: inline-block;
   background-color: #99E2D0;
-  transition: all 2s ease;
+  transition: all 0.5s;
   width: 50px;
   height: 100%; }
   .check .fa-check-circle {
-    transform: rotate(-180deg);
-    transition: transform 2s;
-    margin: 42%;
+    transform: rotate(-360deg);
+    transition: transform 0.8s;
+    margin-top: 56%;
+    margin-right: 60%;
+    margin-bottom: 60%;
+    margin-left: 38%;
     color: white; }
 
 .cover {
